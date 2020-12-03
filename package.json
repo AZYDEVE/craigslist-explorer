@@ -1,0 +1,22 @@
+{
+  "name": "craigslist-explorer",
+  "version": "1.0.0",
+  "description": "Final project for the class CS5610 Web Development",
+  "main": "index.js",
+  "scripts": {
+    "clean-data": "node data/clean.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emile-f/craigslist-explorer.git"
+  },
+  "author": "Emile Ferrand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emile-f/craigslist-explorer/issues"
+  },
+  "homepage": "https://github.com/emile-f/craigslist-explorer#readme",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3"
+  }
+}

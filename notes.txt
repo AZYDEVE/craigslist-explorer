@@ -1,0 +1,6 @@
+image urls:
+
+original from json: https://images.craigslist.org/00c0c_iB4pGrQTqnI_0ak07K_50x50c.jpg
+remove 50x50c
+other sizes: 600x450, 300x300
+always .jpg
