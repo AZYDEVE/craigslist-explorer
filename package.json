@@ -1,22 +1,59 @@
 {
   "name": "craigslist-explorer",
-  "version": "1.0.0",
-  "description": "Final project for the class CS5610 Web Development",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.1",
+    "http-status": "^1.5.0",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-loader-spinner": "^3.1.14",
+    "react-paginate": "^6.5.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  },
   "scripts": {
-    "clean-data": "node data/clean.js"
+    "start": "node server/app.js",
+    "start:frontend": "PORT=8080 react-scripts start",
+    "build:frontend": "react-scripts build",
+    "start:backend": "nodemon server/app.js localhost 3000 --ignore src/**/*",
+    "clean-data": "node data/clean.js",
+    "lint": "eslint src/**/*.js server/**/*.js --fix",
+    "format": "prettier --write **.js **.css **.json **.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/emile-f/craigslist-explorer.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "Emile Ferrand",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/emile-f/craigslist-explorer/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/emile-f/craigslist-explorer#readme",
   "devDependencies": {
-    "cheerio": "^1.0.0-rc.3"
+    "cheerio": "^1.0.0-rc.3",
+    "concurrently": "^5.3.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
   }
 }

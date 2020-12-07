@@ -1,0 +1,89 @@
+.feed {
+  position: relative;
+}
+
+.feed .page-head {
+  margin-left: 13px;
+}
+
+.feed .loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.feed .container {
+  width: 75%;
+}
+
+.feed .aside {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+}
+
+.feed .aside a {
+  text-decoration: none;
+  color: black;
+}
+
+.feed .aside .create-new-thread,
+.feed .aside .search-bar,
+.feed .aside .search-info {
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.feed .aside .search-bar {
+  height: 110px;
+}
+.feed .aside .search-info {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.feed .aside .search-bar,
+.feed .aside .search-info {
+  margin-top: 13px;
+}
+
+/* Pagination */
+
+.feed .pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 13px;
+}
+
+.feed .previous {
+  margin-right: 0;
+}
+
+.feed .pagination li a {
+  margin-right: 13px;
+  height: 30px;
+  background-color: transparent;
+  border: #4f5d75 solid 1px;
+  cursor: pointer;
+  color: #4f5d75;
+  line-height: 30px;
+  user-select: none;
+  padding: 3px 13px;
+}
+
+.feed .pagination .pagination__link--active a {
+  background-color: #4f5d75;
+  color: white;
+}
+.feed .pagination .pagination__link--disabled a {
+  border: #b1b1b1 solid 1px;
+  color: #b1b1b1;
+}

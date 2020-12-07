@@ -93,7 +93,8 @@ const clean = (obj) => {
     try {
         const $ = cheerio.load(obj.postingbody);
         returnObj.url = $('.print-qrcode').attr('data-location');
-        returnObj.body = $('section').text();
+        $('section').children().remove('div').remove('a'); // Remove qr-code text and contact me text
+        returnObj.body = $('section').text()
     } catch (error) {
         returnObj.url = "";
         returnObj.body = "";
@@ -107,7 +108,6 @@ const clean = (obj) => {
 
 const cleanData = () => {
     const original = readJson("data/apts.json");
-
     const result = [];
     original.forEach(obj => {
         result.push(clean(obj));

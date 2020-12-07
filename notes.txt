@@ -4,3 +4,7 @@ original from json: https://images.craigslist.org/00c0c_iB4pGrQTqnI_0ak07K_50x50
 remove 50x50c
 other sizes: 600x450, 300x300
 always .jpg
+
+Design idea
+
+https://www.behance.net/gallery/17178031/Craigslist-Redesign

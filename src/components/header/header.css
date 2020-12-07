@@ -1,0 +1,85 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  height: 52px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10000;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+}
+
+header.active {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+header > * {
+  line-height: 52px;
+}
+
+header .hamburger-menu {
+  display: none;
+  height: 100%;
+  width: 46px;
+}
+
+header .logo {
+  width: 52px;
+  /* background-image: url(./assets/logo.png); Add icon later */
+  height: 52px;
+  background-size: cover;
+}
+
+header.active .menu a {
+  color: #4f5d75;
+}
+
+header a {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4f5d75;
+  text-decoration: none;
+}
+
+header.active .menu a:hover {
+  border-bottom: solid 4px #4f5d75;
+}
+
+header .filler,
+header .login {
+  text-align: left;
+  height: 100%;
+}
+
+header .login > div {
+  display: flex;
+}
+
+header .login .user {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+  text-align: right;
+}
+
+header .login button {
+  width: 80px;
+  height: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 11px;
+  background-color: #4f5d75;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
