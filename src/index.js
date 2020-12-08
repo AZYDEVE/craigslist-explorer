@@ -11,6 +11,7 @@ import NotFound from "./views/not-found";
 // Components
 import Header from "./components/header";
 import Footer from "./components/footer";
+import FeedAside from "./components/feed-aside";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +19,10 @@ ReactDOM.render(
       <Header />
       <div role="main" id="craigslist-body" className="craigslist-body">
         <Switch>
-          <Route exact path="/" component={Feed} />
+          <Route exact path="/">
+            <FeedAside />
+            <Feed />
+          </Route>
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./feed.css";
 // import { getAllThreads, searchAllThreads } from "../../api/thread";
-// import ThreadList from "../../components/thread-list";
+import PostList from "../../components/post-list";
 // import Loader from "react-loader-spinner";
 // import PageHead from "../../components/page-head";
 // import { Link } from "react-router-dom";
@@ -143,7 +143,7 @@ const Feed = (props) => {
 
   return (
     <div className="feed">
-      <h1>Feed page here</h1>
+      <PostList posts={posts} />
 
       {/* <div className="container">
         {

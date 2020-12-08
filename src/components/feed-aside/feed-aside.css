@@ -1,0 +1,60 @@
+.aside {
+  height: 100vh;
+  width: 250px;
+  margin-right: 50px;
+}
+
+.aside .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 5px;
+}
+
+.aside .date div:first-child {
+  font-size: 20px;
+  line-height: 20px;
+}
+.aside .date div:last-child {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.aside .divider {
+  height: 1px;
+  background-color: #ececec;
+  width: 100%;
+}
+
+.aside .location {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding: 20px 5px;
+}
+
+.aside .location div {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside .location div div:first-child {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.aside .location div div:last-child {
+  color: #9e9e9e;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.aside .location .image {
+  background-image: url("../../assets/SF.min.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
