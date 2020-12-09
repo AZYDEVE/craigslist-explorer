@@ -1,0 +1,37 @@
+.SwitchControl {
+  border-radius: 50px;
+  background-color: #005edc;
+  width: 50px;
+  height: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.SwitchControl.off {
+  background-color: #d0d0d0;
+}
+
+.SwitchControl .SwitchControl--slider {
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 10px * 5);
+  transition: all 0.3s cubic-bezier(0.56, 0.045, 0, 1);
+}
+.SwitchControl .SwitchControl--slider .SwitchControl--knob {
+  width: 20px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  left: calc(50% - 2px * 5);
+  top: 2px;
+  border-radius: 50px;
+}
+.SwitchControl.on .SwitchControl--slider {
+  transform: translateX(13px);
+}
+.SwitchControl.off .SwitchControl--slider {
+  transform: translateX(-13px);
+}

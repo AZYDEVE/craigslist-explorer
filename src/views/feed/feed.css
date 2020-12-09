@@ -87,3 +87,8 @@
   border: #b1b1b1 solid 1px;
   color: #b1b1b1;
 }
+
+.feed .feed-smaller {
+  max-width: 90%;
+  margin: 0 auto;
+}

@@ -5,7 +5,8 @@ import PostList from "../../components/post-list";
 // import Loader from "react-loader-spinner";
 // import PageHead from "../../components/page-head";
 // import { Link } from "react-router-dom";
-// import SearchBar from "../../components/search-bar";
+import Filter from "../../components/filter";
+import Sort from "../../components/sort";
 // import ReactPaginate from "react-paginate";
 
 const Feed = (props) => {
@@ -143,7 +144,13 @@ const Feed = (props) => {
 
   return (
     <div className="feed">
-      <PostList posts={posts} />
+      <Filter />
+      <div className='feed-smaller'>
+        <Sort />
+
+        <PostList posts={posts} />
+      </div>
+
 
       {/* <div className="container">
         {
