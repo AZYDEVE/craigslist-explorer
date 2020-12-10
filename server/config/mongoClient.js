@@ -37,7 +37,7 @@ const initConnection = () => {
     // Get uri from the config
     const uri = config.mongo.uri;
     // connect to our forum DB
-    mongoDb(uri, "forum").then((db) => {
+    mongoDb(uri, "craigslist").then((db) => {
       database = db;
       // Resolve the connection
       resolve();

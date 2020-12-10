@@ -87,7 +87,7 @@ const clean = (obj) => {
         }
     }
 
-    returnObj.date = obj['result-date'];
+    returnObj.date = Date.parse(obj['result-date']);
 
     // get body from html
     try {
@@ -107,7 +107,7 @@ const clean = (obj) => {
 
 
 const cleanData = () => {
-    const original = readJson("data/apts.json");
+    const original = readJson("data/result.json");
     const result = [];
     original.forEach(obj => {
         result.push(clean(obj));

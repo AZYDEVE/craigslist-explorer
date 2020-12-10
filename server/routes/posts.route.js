@@ -1,7 +1,7 @@
 const express = require("express");
 const postController = require("../controller/posts.controller");
 const router = express.Router();
-const helper = require("./helper");
+// const helper = require("./helper");
 
 // const addThread = async (req, res) => {
 //   if (req && req.body) {
@@ -61,23 +61,50 @@ const helper = require("./helper");
 
 const getAllPosts = (req, res) => {
 
-  // check for filter or sort order
-  // const sortOrder = 'price';
-  // const filter = [];
-  // if (req.query) {
-  //   if (req.query.oder) {
-  //     sortOrder = req.query.oder;
-  //   }
-  //   if (req.query.filter) {
+  // return axios.get(`${env[process.env.NODE_ENV].api}/posts/all?page=${page}&filter=${uriFilter}&sort=${uriSorting}`);
 
-  //   }
-  // }
+  const page = req.query.page;
+  let filter = req.query.filter
+  try {
+    filter = decodeURIComponent(filter);
+    filter = JSON.parse(filter);
+  } catch (error) {
+    console.log('getAllPosts: Failed to parse filter using default values');
+    filter = {};
+  }
+
+  let sorting = req.query.sort
+  try {
+    sorting = decodeURIComponent(sorting);
+    sorting = JSON.parse(sorting);
+  } catch (error) {
+    console.log('getAllPosts: Failed to parse sorting using default values');
+    sorting = {
+      amount: "10",
+      sortBy: "date",
+      sortOrder: "asc"
+    };
+  }
+
+  if (!sorting.amount) {
+    sorting.amount = 10;
+  }
+
+  if (!sorting.sortBy) {
+    sorting.sortBy = "date";
+  }
+
+  if (!sorting.sortOrder) {
+    sorting.sortOrder = "asc";
+  }
+
+  const startRange = page * parseInt(sorting.amount);
 
   // read entire table
   postController
-    .readThreads()
-    .then((threads) => {
-      res.json(threads);
+    .readPosts(filter, sorting, startRange, parseInt(sorting.amount))
+    .then((posts) => {
+      res.json(posts);
     })
     .catch((err) => {
       // Database call failed return 500 error

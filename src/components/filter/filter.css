@@ -45,6 +45,7 @@
 
 .filter .bedrooms select {
   border: none;
+  cursor: pointer;
 }
 
 .filter .minimize {
@@ -52,4 +53,7 @@
   padding: 0 20px;
   flex: 1;
   flex-direction: row-reverse;
+}
+.filter .minimize span {
+  cursor: pointer;
 }
