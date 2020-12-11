@@ -7,6 +7,7 @@ import { Switch, Route, HashRouter as Router } from "react-router-dom";
 // views
 import Feed from "./views/feed";
 import NotFound from "./views/not-found";
+import Post from "./views/post";
 
 // Components
 import Header from "./components/header";
@@ -22,6 +23,10 @@ ReactDOM.render(
           <Route exact path="/">
             <FeedAside />
             <Feed />
+          </Route>
+          <Route path="/post/:postId" >
+            <FeedAside />
+            <Post />
           </Route>
           <Route path="*" component={NotFound} />
         </Switch>

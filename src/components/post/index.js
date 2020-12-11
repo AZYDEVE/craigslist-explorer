@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./post.css";
 import {
   getImageUrl,
@@ -10,21 +10,12 @@ import {
 import { Link } from "react-router-dom";
 
 const Post = (props) => {
-  const [date, setDate] = useState("");
-  const [color, setColor] = useState({});
-
-  const initialSetup = () => {
-    // setDate(convertDate(props.post.created));
-  };
-
-  useEffect(initialSetup, []);
-
   return (
     <Link
       className="post-container"
       to={{
         pathname: "/post/" + props.post._id,
-        state: { postId: props.post._id },
+        state: { postId: props.post._id, post: props.post },
       }}
     >
       <div className="image" style={{ backgroundImage: `url(${getImageUrl(props.post.images[0], imageSize.MEDIUM)})` }} >

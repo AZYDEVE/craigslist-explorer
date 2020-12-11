@@ -1,7 +1,7 @@
 export const imageSize = {
   SMALL: '50x50c',
   MEDIUM: '300x300',
-  BIG: '600x450'
+  LARGE: '600x450'
 }
 
 

@@ -2,13 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./feed.css";
 import { getPosts } from "../../api/posts";
 import PostList from "../../components/post-list";
-// import Loader from "react-loader-spinner";
-// import PageHead from "../../components/page-head";
-// import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
 import Filter from "../../components/filter";
 import Sort from "../../components/sort";
 import ReactPaginate from "react-paginate";
-import { debounce, throttle } from 'lodash-es';
 
 const Feed = (props) => {
   const [posts, setPosts] = useState([]);
@@ -24,15 +21,25 @@ const Feed = (props) => {
   const [sorting, setSorting] = useState({});
 
   const requestPosts = () => {
+    setDataAvailable(false);
     console.log('request posts');
     getPosts(filter, sorting, currentPage)
       .then((response) => {
-        console.log('res', response);
-        // get amount of posts
-        setAmountOfPosts(response.data.total);
+        console.log('response posts', response);
 
-        // Insert users
-        setPosts(response.data.posts);
+        // get amount of posts
+        if (response.data.total) {
+          setAmountOfPosts(response.data.total);
+        } else {
+          setAmountOfPosts(0);
+        }
+
+        // Insert posts
+        if (response.data.posts) {
+          setPosts(response.data.posts);
+        } else {
+          setPosts([]);
+        }
 
         // Let UI know that the users are available
         setDataAvailable(true);
@@ -69,93 +76,35 @@ const Feed = (props) => {
   }
   useEffect(initialLoad, []);
 
-  // const onSearch = (term) => {
-  //   setDataAvailable(false);
-  //   searchAllThreads(term)
-  //     .then((response) => {
-  //       // Insert users
-  //       setSearchThreads(response.data);
-
-  //       // Let UI know that the users are available
-  //       setDataAvailable(true);
-  //       setSearchDone(true);
-
-  //       // update the pagination
-  //     })
-  //     .catch((err) => {
-  //       // TODO: Show error message
-  //       console.error("Failed to get all threads", err);
-  //     });
-  // };
-
-  // const resetSearch = () => {
-  //   setSearchTerm("");
-  //   setSearchThreads([]);
-  //   setSearchDone(false);
-  // };
-
   return (
     <div className="feed">
       <Filter updateFilter={updateFilter} />
       <div className='feed-smaller'>
         <Sort updateSorting={updateSorting} />
-
-        <PostList posts={posts} />
-
-        <ReactPaginate
-          previousLabel={"← Previous"}
-          nextLabel={"Next →"}
-          pageCount={Math.ceil(amountOfPosts / (sorting && sorting.amount ? sorting.amount : 10))}
-          onPageChange={handlePageClick}
-          containerClassName={"pagination"}
-          previousLinkClassName={"pagination__link"}
-          nextLinkClassName={"pagination__link"}
-          disabledClassName={"pagination__link--disabled"}
-          activeClassName={"pagination__link--active"}
-        />
-      </div>
-
-
-      {/* <div className="container">
         {
-          // Show loader until we load the user list
-          dataAvailable ? (
-            <React.Fragment>
-              <ReactPaginate
-                previousLabel={"← Previous"}
-                nextLabel={"Next →"}
-                pageCount={Math.ceil(posts.length / PER_PAGE)}
-                onPageChange={handlePageClick}
-                containerClassName={"pagination"}
-                previousLinkClassName={"pagination__link"}
-                nextLinkClassName={"pagination__link"}
-                disabledClassName={"pagination__link--disabled"}
-                activeClassName={"pagination__link--active"}
-              />
-              <ThreadList threads={posts} />
-              <ReactPaginate
-                previousLabel={"← Previous"}
-                nextLabel={"Next →"}
-                pageCount={Math.ceil(posts.length / PER_PAGE)}
-                onPageChange={handlePageClick}
-                containerClassName={"pagination"}
-                previousLinkClassName={"pagination__link"}
-                nextLinkClassName={"pagination__link"}
-                disabledClassName={"pagination__link--disabled"}
-                activeClassName={"pagination__link--active"}
-              />
-            </React.Fragment>
-          ) : (
-              <Loader
-                type="Puff"
-                color="#4f5d75"
-                height={100}
-                width={100}
-                className="loader"
-              />
-            )
+          dataAvailable ?
+            <PostList posts={posts} />
+            :
+            <Loader
+              type="Puff"
+              color="#005edc"
+              height={100}
+              width={100}
+              className="loader"
+            />
         }
-      </div> */}
+      </div>
+      <ReactPaginate
+        previousLabel={"← Previous"}
+        nextLabel={"Next →"}
+        pageCount={Math.ceil(amountOfPosts / (sorting && sorting.amount ? sorting.amount : 10))}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination"}
+        previousLinkClassName={"pagination__link"}
+        nextLinkClassName={"pagination__link"}
+        disabledClassName={"pagination__link--disabled"}
+        activeClassName={"pagination__link--active"}
+      />
     </div>
   );
 };

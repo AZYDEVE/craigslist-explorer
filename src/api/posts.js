@@ -14,8 +14,8 @@ export const searchAllThreads = (searchTerm) => {
   );
 };
 
-export const getThread = (id) => {
-  return axios.get(env[process.env.NODE_ENV].api + "/thread/one?id=" + id);
+export const getPost = (id) => {
+  return axios.get(env[process.env.NODE_ENV].api + "/posts/one?id=" + id);
 };
 
 // export const addThread = (payload) => {

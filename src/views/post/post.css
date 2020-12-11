@@ -1,0 +1,62 @@
+.post {
+  width: calc(100% - 250px);
+}
+
+.post .content {
+  display: flex;
+}
+.right,
+.left {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.gallery {
+  height: 300px;
+  --swiper-theme-color: #005edc;
+}
+
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.gallery .swiper-button-disabled {
+  color: #9e9e9e;
+}
+
+.right .map {
+  width: 100%;
+  height: 300px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post .data div {
+  font-size: 16px;
+  line-height: 16px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.post .data span {
+  color: #9e9e9e;
+  margin-right: 5px;
+  user-select: none;
+}
+
+.post .data .divider {
+  height: 1px;
+  background-color: #d0d0d0;
+  width: 100%;
+}

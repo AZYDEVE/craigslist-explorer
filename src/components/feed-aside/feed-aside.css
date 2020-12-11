@@ -65,3 +65,8 @@
 .aside .current .arrow {
   margin-left: 10px;
 }
+
+.aside .back {
+  color: #005edc;
+  text-decoration: none;
+}

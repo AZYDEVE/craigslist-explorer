@@ -4,7 +4,7 @@ import Toggle from '../toggle';
 
 const Filter = (props) => {
   const [minPrice, setMinPrice] = useState(1);
-  const [maxPrice, setMaxPrice] = useState(999);
+  const [maxPrice, setMaxPrice] = useState(9999);
   const [bedrooms, setBedrooms] = useState("1");
   const [area, setArea] = useState(100);
   const [toggleState, setToggleState] = useState(false);
