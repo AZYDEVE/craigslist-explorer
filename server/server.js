@@ -3,9 +3,19 @@ const mongoSanitize = require("express-mongo-sanitize");
 const compression = require("compression");
 const cors = require("cors");
 const httpStatus = require("http-status");
+const session = require('express-session')
+const { v4: uuidv4 } = require("uuid");
+const FileStore = require('session-file-store')(session);
+const passport = require('passport');
+const cookieParser = require("cookie-parser");
+var bodyParser = require('body-parser')
+
+// Passport config
+const configurePassport = require('./config/authConfig');
+configurePassport();
 
 // routes
-// const accountRoute = require("./routes/account.route");
+const authRoute = require("./routes/auth.route");
 const postsRoute = require("./routes/posts.route");
 // const locationRoute = require("./routes/location.route");
 
@@ -13,13 +23,14 @@ const postsRoute = require("./routes/posts.route");
 const app = express();
 
 // enable cors
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:8080', credentials: true }));
 
-// parse json request body
-app.use(express.json());
+// init cookie-parser
+app.use(cookieParser());
 
-// parse urlencoded request body
-app.use(express.urlencoded({ extended: true }));
+// init Body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // sanitize request data
 app.use(mongoSanitize());
@@ -27,13 +38,42 @@ app.use(mongoSanitize());
 // gzip compression
 app.use(compression());
 
+// session middelware
+app.use(session({
+  genid: (req) => {
+    console.log('Inside the session middleware')
+    console.log(req.sessionID)
+    return uuidv4() // use UUIDs for session IDs
+  },
+  store: new FileStore(),
+  secret: "Hi I'm Emile",
+  resave: false,
+  saveUninitialized: false
+}))
+
+// Enable passport
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Default route
 app.get("/", (req, res) => {
-  res.send("Hello from form api");
+  console.log(req.sessionID)
+  res.send("Hello from Craigslist-explorer api");
 });
 
+app.get('/emile', (req, res) => {
+  console.log('Inside GET /authrequired callback')
+  console.log(`User authenticated? ${req.isAuthenticated()}`)
+  if (req.isAuthenticated()) {
+
+    res.send('you hit the authentication endpoint\n')
+  } else {
+    res.redirect('/')
+  }
+})
+
 // user api requests
-// app.use("/accounts", accountRoute);
+app.use("/auth", authRoute);
 app.use("/posts", postsRoute);
 // app.use("/location", locationRoute);
 
@@ -43,6 +83,7 @@ app.use((req, res, next) => {
   res.status(httpStatus.NOT_FOUND);
   res.send("Not found");
 });
+
 
 // Export Express router
 module.exports = app;

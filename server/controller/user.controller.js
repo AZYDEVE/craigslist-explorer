@@ -1,5 +1,5 @@
 const mongoClient = require("../config/mongoClient");
-const User = require("../models/user");
+const postController = require("../controller/posts.controller");
 
 // only read active users
 // don't return password field
@@ -48,8 +48,8 @@ const readUser = (doc) => {
     mongoClient
       .getDatabase()
       .connection.collection("user")
-      .find(Object.assign({ active: 1 }, doc), {
-        projection: { _id: 0, hashed_password: 0 },
+      .find(Object.assign({}, doc), {
+        projection: { password: 0 },
       })
       .toArray((err, docs) => {
         if (err) {
@@ -67,7 +67,7 @@ const addUser = (doc) => {
     mongoClient
       .getDatabase()
       .connection.collection("user")
-      .insertOne(Object.assign({ active: 1 }, doc))
+      .insertOne(Object.assign({}, doc))
       .then((result, err) => {
         if (err) {
           console.error("error: addUser", err);
@@ -76,12 +76,8 @@ const addUser = (doc) => {
           // The mongo success result is on the following data structure
           // result.ops: this is an array
           if (result.ops && result.ops.length && result.ops.length > 0) {
-            // Create user of result and remove password
-            const user = User.from(result.ops[0]);
-            // remove password before sending back
-            user.hashed_password = undefined;
             // Return inserted user
-            resolve(user);
+            resolve(result.ops[0]);
           } else {
             resolve(undefined);
           }

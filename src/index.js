@@ -1,38 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Switch, Route, HashRouter as Router } from "react-router-dom";
 
-// views
-import Feed from "./views/feed";
-import NotFound from "./views/not-found";
-import Post from "./views/post";
-
-// Components
-import Header from "./components/header";
-import Footer from "./components/footer";
-import FeedAside from "./components/feed-aside";
+import Wrapper from './wrapper';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <div role="main" id="craigslist-body" className="craigslist-body">
-        <Switch>
-          <Route exact path="/">
-            <FeedAside />
-            <Feed />
-          </Route>
-          <Route path="/post/:postId" >
-            <FeedAside />
-            <Post />
-          </Route>
-          <Route path="*" component={NotFound} />
-        </Switch>
-      </div>
-      <Footer />
-    </Router>
+    <Wrapper />
   </React.StrictMode>,
   document.getElementById('root')
 );

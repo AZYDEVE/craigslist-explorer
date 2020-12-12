@@ -3,17 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-google-maps/api": "^1.13.0",
     "async": "^3.2.0",
     "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
     "express": "^4.17.1",
     "express-mongo-sanitize": "^2.0.1",
+    "express-session": "^1.17.1",
     "http-status": "^1.5.0",
     "lodash-es": "^4.17.15",
     "moment": "^2.29.1",
     "mongodb": "^3.6.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-html-parser": "^2.0.2",
@@ -21,17 +27,26 @@
     "react-paginate": "^6.5.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "session-file-store": "^1.5.0",
     "swiper": "^6.4.1",
+    "uuid": "^8.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "node server/app.js",
     "start:frontend": "PORT=8080 react-scripts start",
     "build:frontend": "react-scripts build",
-    "start:backend": "nodemon server/app.js --ignore 'src/**/*'",
+    "start:backend": "nodemon server/app.js",
     "clean-data": "node data/clean.js",
     "lint": "eslint src/**/*.js server/**/*.js --fix",
     "format": "prettier --write **.js **.css **.json **.html"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/**/*",
+      "sessions/**/*",
+      "data/**/*"
+    ]
   },
   "eslintConfig": {
     "extends": [

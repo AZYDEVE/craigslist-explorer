@@ -1,12 +1,11 @@
-const { response } = require("express");
 const mongoClient = require("../config/mongoClient");
 const mongo = require("mongodb");
 
 const readPosts = (filter, sorting, startRange, amount) => {
   return new Promise((resolve, reject) => {
-    console.log('sort', { [sorting['sortBy']]: sorting.sortOrder && sorting.sortOrder === 'desc' ? 1 : -1 });
-    console.log('range', startRange, amount);
-    console.log('filter', filter);
+    // console.log('sort', { [sorting['sortBy']]: sorting.sortOrder && sorting.sortOrder === 'desc' ? 1 : -1 });
+    // console.log('range', startRange, amount);
+    // console.log('filter', filter);
 
     const query = [];
 
@@ -63,7 +62,7 @@ const readPosts = (filter, sorting, startRange, amount) => {
             console.error("error: readPosts", err);
             reject("Failed to get all posts from database");
           } else {
-            console.log('done with posts');
+            // console.log('done with posts');
             resolve(docs);
           }
         });
@@ -71,7 +70,7 @@ const readPosts = (filter, sorting, startRange, amount) => {
 
     Promise.all([countPromise, dataPromise])
       .then((data) => {
-        console.log('done with all')
+        // console.log('done with all')
         const result = {};
         result.total = data[0].total;
         result.posts = data[1];

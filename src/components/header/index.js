@@ -1,7 +1,6 @@
 import React from "react";
 import "./header.css";
 import { Link, withRouter } from "react-router-dom";
-// import { currentUser, logOut } from "../../service/user.service";
 
 // Change the page in router to the correct querystring
 // uses react-router linking
@@ -22,24 +21,23 @@ const Header = (props) => {
         </Link>
       </nav>
       <div className="login">
-        {/* {currentUser.id ? (
+        {props.user ? (
           <div>
-            <div className="user">Hello {currentUser.name}</div>
-            <button onClick={logOut} aria-label="Logout button">
-              {" "}
-              Logout{" "}
+            <div className="user">Hello {props.user.email}</div>
+            <button onClick={props.logout} aria-label="Logout button">
+              Logout
             </button>
           </div>
-        ) : ( */}
-        <Link
-          to={{
-            pathname: "/login",
-            state: { from: props.location },
-          }}
-        >
-          Sign-In/Sign-up
-          </Link>
-        {/* )} */}
+        ) : (
+            <Link
+              to={{
+                pathname: "/login",
+                state: { from: props.location },
+              }}
+            >
+              Sign-In/Sign-up
+            </Link>
+          )}
       </div>
     </header>
   );

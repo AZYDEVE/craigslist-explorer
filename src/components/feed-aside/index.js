@@ -23,6 +23,8 @@ const Aside = (props) => {
       setId(props.location.state.postId);
     } else if (props.match && props.match.params && props.match.params.postId) {
       setId(props.match.params.postId);
+    } else {
+      setId(null);
     }
   };
 
