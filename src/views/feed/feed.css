@@ -1,5 +1,6 @@
 .feed {
   position: relative;
+  width: 1000px;
 }
 
 .feed .loader {

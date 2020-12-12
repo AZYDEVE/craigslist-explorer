@@ -10,14 +10,14 @@ const Header = (props) => {
   return (
     <header role="banner" className="active" id="scroll-header">
       <nav role="navigation" className="menu">
+        <a href="#">
+          Craigslist
+      </a>
         <Link aria-label="Navigate to Home page" to="/">
           Home
         </Link>
-        <Link aria-label="Navigate to new thread page" to="/thread/new_thread">
-          New thread
-        </Link>
         <Link aria-label="Navigate to statistics page" to="/stats">
-          Stats
+          Map
         </Link>
       </nav>
       <div className="login">

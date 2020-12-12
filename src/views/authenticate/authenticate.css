@@ -15,9 +15,7 @@
 .auth-container .container {
   width: 500px;
   position: relative;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  border: 1px #d0d0d0 solid;
   background-color: white;
   padding: 25px;
   margin: 13px;
@@ -40,21 +38,23 @@
   width: calc(100% - 150px);
   display: flex;
   padding: 15px;
-  border-color: #4f5d75;
+  border-color: #d0d0d0;
   border-width: 1px;
 }
 .auth-container .container button {
   width: 150px;
   padding: 15px;
-  background-color: #4f5d75;
-  color: white;
+  background-color: transparent;
+  color: #005edc;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   border: none;
   height: 50px;
   line-height: 50px;
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
+  margin-left: 15px;
   border-radius: 5px;
 }
 
@@ -65,8 +65,8 @@
 
 .auth-container .top-right-corner {
   position: absolute;
-  background-color: #4f5d75;
-  color: white;
+  background-color: transparent;
+  color: #005edc;
   top: 0;
   right: 0;
   width: 75px;

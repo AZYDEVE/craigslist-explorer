@@ -19,46 +19,44 @@ header.active {
 }
 
 header > * {
-  line-height: 52px;
-}
-
-header .hamburger-menu {
-  display: none;
-  height: 100%;
-  width: 46px;
-}
-
-header .logo {
-  width: 52px;
-  /* background-image: url(./assets/logo.png); Add icon later */
-  height: 52px;
-  background-size: cover;
+  line-height: 32px;
 }
 
 header.active .menu a {
-  color: #4f5d75;
+  color: black;
+}
+header.active .menu a:first-child {
+  text-decoration: underline;
 }
 
 header a {
-  padding: 12px 20px;
+  padding: 0px 20px;
   font-size: 16px;
   font-weight: 600;
-  color: #4f5d75;
+  color: #005edc;
   text-decoration: none;
 }
 
-header.active .menu a:hover {
-  border-bottom: solid 4px #4f5d75;
+header.active .menu a:hover:not(:first-child) {
+  color: #005edc;
+}
+
+header.active .menu a {
+  border-left: 1px #d0d0d0 solid;
 }
 
 header .filler,
 header .login {
   text-align: left;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 header .login > div {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header .login .user {
@@ -67,17 +65,18 @@ header .login .user {
   text-overflow: ellipsis;
   width: 250px;
   text-align: right;
+  padding: 0px 20px;
 }
 
 header .login button {
   width: 80px;
-  height: 30px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 11px;
-  background-color: #4f5d75;
+  height: 32px;
+  padding: 0px 20px;
   outline: none;
   border: none;
   cursor: pointer;
-  color: white;
+  color: #005edc;
+  font-size: 16px;
+  background-color: transparent;
+  border-left: 1px #d0d0d0 solid;
 }
