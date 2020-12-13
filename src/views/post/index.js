@@ -89,7 +89,7 @@ const PostPage = (props) => {
 
   // Load the annotation of the post
   const loadAnnotations = () => {
-    if (id) {
+    if (id && props.user) {
       getAnnotations(id)
         .then((response) => {
           if (response.status === 200) {

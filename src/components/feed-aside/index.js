@@ -156,13 +156,13 @@ const Aside = (props) => {
         <div>
           Lists
         </div>
-        <div className="arrow">
+        <div alt='Arrow down' aria-label='Arrow down' className="arrow">
           ↓
         </div>
         <div>
           housing
         </div>
-        <div className="arrow">
+        <div alt='Arrow down' aria-label='Arrow down' className="arrow">
           ↓
         </div>
         <div>
@@ -179,7 +179,7 @@ const Aside = (props) => {
         {
           props.post && props.post.title ?
             <React.Fragment>
-              <div className="arrow">
+              <div alt='Arrow down' aria-label='Arrow down' className="arrow">
                 ↓
               </div>
               <div>

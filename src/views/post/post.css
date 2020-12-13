@@ -27,7 +27,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  color: #9e9e9e;
+  color:  black;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -35,7 +35,7 @@
 }
 
 .gallery .swiper-button-disabled {
-  color: #9e9e9e;
+  color:  black;
 }
 
 .right .map {
@@ -56,7 +56,7 @@
 }
 
 .post .data span {
-  color: #9e9e9e;
+  color:  black;
   margin-right: 5px;
   user-select: none;
 }

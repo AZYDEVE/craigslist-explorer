@@ -6,6 +6,7 @@
   display: flex;
   text-decoration: none;
   color: black;
+  background-color: white;
 }
 
 .post-container:not(:last-child) {
@@ -18,7 +19,12 @@
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  color: #9e9e9e;
+}
+
+.post-container .no-image {
+  width: 100px;
+  height: 75px;
+  color: black;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -36,7 +42,7 @@
 .post-container .content .extra-info {
   display: flex;
   flex-direction: row;
-  color: #9e9e9e;
+  color: black;
   font-size: 15px;
   line-height: 15px;
 }
@@ -51,7 +57,7 @@
 
 .post-container .content .title {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 30px;
   margin-bottom: 10px;
   width: 90%;
   white-space: nowrap;

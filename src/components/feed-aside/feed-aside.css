@@ -48,7 +48,7 @@
 }
 
 .aside .location div div:last-child {
-  color: #9e9e9e;
+  color: black;
   font-size: 15px;
   line-height: 15px;
 }
@@ -67,6 +67,8 @@
 }
 .aside .current .arrow {
   margin-left: 10px;
+  background-color: white;
+  color: black;
 }
 
 .aside .back {
