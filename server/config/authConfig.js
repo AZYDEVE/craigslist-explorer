@@ -27,12 +27,12 @@ const configurePassport = () => {
 
   // tell passport how to serialize the user
   passport.serializeUser((user, done) => {
-    // console.log('Inside serializeUser callback. User id is save to the session file store here')
+    console.log('Inside serializeUser callback. User id is save to the session file store here')
     done(null, user._id);
   });
 
   passport.deserializeUser((id, done) => {
-    // console.log(`The user id passport saved in the session file store is: ${id}`)
+    console.log(`deserializeUser: The user id passport saved in the session file store is: ${id}`)
     userController.readUser({ _id: mongo.ObjectId(id) })
       .then((result) => {
         if (result && result.length && result.length > 0) {
