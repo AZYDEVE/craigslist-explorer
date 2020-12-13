@@ -13,8 +13,11 @@ const Post = (props) => {
         state: { postId: props.post._id, post: props.post },
       }}
     >
-      <div className="image" style={{ backgroundImage: `url(${getImageUrl(props.post.images[0], imageSize.MEDIUM)})` }} >
 
+      <div className="image" style={{ backgroundImage: props.post.images.length > 0 ? `url(${getImageUrl(props.post.images[0], imageSize.MEDIUM)})` : '' }} >
+        {
+          props.post.images.length > 0 ? '' : "No image available"
+        }
       </div>
       <div className="content">
         <div className="title">

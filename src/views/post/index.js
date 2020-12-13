@@ -167,7 +167,7 @@ const PostPage = (props) => {
                   >
                     {
                       post.images.map((image, index) => {
-                        return <SwiperSlide style={{ backgroundImage: `url(${getImageUrl(image, imageSize.LARGE)})` }}> </SwiperSlide>
+                        return <SwiperSlide key={image} style={{ backgroundImage: `url(${getImageUrl(image, imageSize.LARGE)})` }}> </SwiperSlide>
                       })
                     }
                   </Swiper>

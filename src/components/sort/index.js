@@ -38,7 +38,7 @@ const Sort = (props) => {
   return (
     <div className="sort">
       <div className="amount">
-        <select value={amount} onChange={(event) => setAmount(event.target.value)} name="amount">
+        <select aria-label="Option menu for items to show in feed" value={amount} onChange={(event) => setAmount(event.target.value)} name="amount">
           <option value="10">10</option>
           <option value="20" >20</option>
           <option value="40">40</option>
@@ -50,7 +50,7 @@ const Sort = (props) => {
       </div>
       <div className="sort-by">
         <span>Sort by</span>
-        <select value={sortBy} onChange={(event) => setSortBy(event.target.value)} name="amount">
+        <select aria-label="Option menu to pick sort-by value" value={sortBy} onChange={(event) => setSortBy(event.target.value)} name="amount">
           <option value="date">date</option>
           <option value="price">price</option>
           <option value="bedrooms" >bedrooms</option>

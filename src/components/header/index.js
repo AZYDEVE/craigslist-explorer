@@ -10,9 +10,9 @@ const Header = (props) => {
   return (
     <header role="banner" className="active" id="scroll-header">
       <nav role="navigation" className="menu">
-        <a href="#">
+        <Link aria-label="Craigslist" to="/">
           Craigslist
-      </a>
+        </Link>
         <Link aria-label="Navigate to Home page" to="/">
           Home
         </Link>

@@ -18,6 +18,11 @@
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
+  color: #9e9e9e;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
 }
 
 .post-container .content {
@@ -48,6 +53,10 @@
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 10px;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-container .price {

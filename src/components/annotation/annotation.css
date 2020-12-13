@@ -10,14 +10,14 @@
 }
 
 .annotation-item div:first-child {
-  line-height: 24px;
+  line-height: 32px;
   border-right: 1px #d0d0d0 solid;
   padding-right: 20px;
   width: 50px;
 }
 
 .annotation-item div:last-child {
-  line-height: 24px;
+  line-height: 32px;
   padding-left: 20px;
   width: 400px;
 }

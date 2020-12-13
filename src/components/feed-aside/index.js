@@ -128,7 +128,7 @@ const Aside = (props) => {
       <div className="divider"></div>
       <div className="location-picker">
         <div>
-          <select disabled={props.post ? 'disabled' : ''} value={location} onChange={(event) => setLocation(event.target.value)} name="location">
+          <select aria-label="Option menu for neighborhood filter" disabled={props.post ? 'disabled' : ''} value={location} onChange={(event) => setLocation(event.target.value)} name="location">
             <option value="">All</option>
             {
               locations && locations.length > 0 ?
@@ -166,7 +166,7 @@ const Aside = (props) => {
                 to='/'
               >apartments housing for rent</Link>
               :
-              "apartments housing for rent"
+              <h1>apartments housing for rent</h1>
           }
         </div>
         {

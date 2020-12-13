@@ -62,10 +62,10 @@ const Filter = (props) => {
         <Toggle enabled={toggleState} update={toggleSwitch} />
       </div>
       <div className="price">
-        $<input onChange={(event) => setMinPrice(event.target.value)} min="1" max="9999" type='number' value={minPrice} /> -  $<input onChange={(event) => setMaxPrice(event.target.value)} min="1" max="9999" type='number' value={maxPrice} /> <span>Rent</span>
+        $<input aria-label="Minimum price filter" onChange={(event) => setMinPrice(event.target.value)} min="1" max="9999" type='number' value={minPrice} /> -  $<input aria-label="Maximum price filter" onChange={(event) => setMaxPrice(event.target.value)} min="1" max="9999" type='number' value={maxPrice} /> <span>Rent</span>
       </div>
       <div className="bedrooms">
-        <select value={bedrooms} onChange={(event) => setBedrooms(event.target.value)} name="bedrooms">
+        <select aria-label="Option menu for minimum amount of bedrooms" value={bedrooms} onChange={(event) => setBedrooms(event.target.value)} name="bedrooms">
           <option value="1">+1</option>
           <option value="2">+2</option>
           <option value="3">+3</option>
@@ -76,7 +76,7 @@ const Filter = (props) => {
         <span>BR</span>
       </div>
       <div className="area">
-        + <input max="9999" step='50' onChange={(event) => setArea(event.target.value)} min="1" type='number' value={area} /><span>ft²</span>
+        + <input aria-label="Minimum area filter" max="9999" step='50' onChange={(event) => setArea(event.target.value)} min="1" type='number' value={area} /><span>ft²</span>
       </div>
       <div className="minimize">
         <span>^</span>
