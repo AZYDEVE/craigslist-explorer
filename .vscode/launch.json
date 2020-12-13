@@ -12,6 +12,15 @@
       "env": {
         "ENV": "localhost"
       }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "map data",
+      "program": "${workspaceFolder}/data/map-data.js",
+      "env": {
+        "ENV": "localhost"
+      }
     }
   ]
 }

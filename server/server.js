@@ -18,6 +18,7 @@ configurePassport();
 const authRoute = require("./routes/auth.route");
 const postsRoute = require("./routes/posts.route");
 const annotationRoute = require("./routes/annotation.route");
+const locationRoute = require("./routes/location.route");
 
 // Express app
 const app = express();
@@ -62,6 +63,7 @@ app.get("/", (req, res) => {
 app.use("/auth", authRoute);
 app.use("/posts", postsRoute);
 app.use("/annotation", annotationRoute);
+app.use("/location", locationRoute);
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {

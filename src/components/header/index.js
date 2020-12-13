@@ -16,9 +16,6 @@ const Header = (props) => {
         <Link aria-label="Navigate to Home page" to="/">
           Home
         </Link>
-        <Link aria-label="Navigate to statistics page" to="/stats">
-          Map
-        </Link>
       </nav>
       <div className="login">
         {props.user ? (

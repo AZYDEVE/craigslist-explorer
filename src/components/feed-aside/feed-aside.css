@@ -33,6 +33,9 @@
   padding: 20px 5px;
 }
 
+.aside .location-picker {
+  padding: 20px 5px;
+}
 .aside .location div {
   justify-content: center;
   display: flex;
@@ -69,4 +72,16 @@
 .aside .back {
   color: #005edc;
   text-decoration: none;
+}
+
+.aside .map {
+  height: 150px;
+}
+
+.aside .location-picker select {
+  cursor: pointer;
+  text-align: right;
+  border: 1px #d0d0d0 solid;
+  border-radius: 2px;
+  margin-bottom: 20px;
 }

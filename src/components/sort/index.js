@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./sort.css";
 
 const Sort = (props) => {
+
   const [amount, setAmount] = useState("10");
   const [sortBy, setSortBy] = useState("date");
   const [sortOrder, setSortOrder] = useState('asc');
   const [oldSort, setOldSort] = useState({});
 
+  // Compare the sort so we know when to update the feed
   const compareSorting = (oldSort, newSort) => {
     if (
       oldSort.amount === newSort.amount &&
@@ -31,7 +33,7 @@ const Sort = (props) => {
       setOldSort(currentState)
       props.updateSorting(currentState)
     }
-  }, [amount, sortBy, sortOrder, props, oldSort])
+  }, [amount, sortBy, sortOrder, oldSort, props])
 
   return (
     <div className="sort">

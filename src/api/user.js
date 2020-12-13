@@ -6,6 +6,8 @@ import env from "../config/env";
 // Get env api -> production: deployed database
 // development -> localhost database
 
+// Needs withCredentials and timeout as properties in the header for passport to work
+
 export const signInUser = (payload) => {
   return axios.post(
     env[process.env.NODE_ENV].api + "/auth/signin",

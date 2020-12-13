@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./filter.css";
 import Toggle from '../toggle';
 
+import "./filter.css";
+
 const Filter = (props) => {
+
   const [minPrice, setMinPrice] = useState(1);
   const [maxPrice, setMaxPrice] = useState(9999);
   const [bedrooms, setBedrooms] = useState("1");
@@ -10,6 +12,8 @@ const Filter = (props) => {
   const [toggleState, setToggleState] = useState(false);
   const [oldFilter, setOldFilter] = useState({});
 
+  // Check if there is a change in the filter
+  // if there is we will enable the toggle button
   const compareFilter = (oldFilter, newFilter) => {
     if (
       oldFilter.minPrice === newFilter.minPrice &&
@@ -23,6 +27,7 @@ const Filter = (props) => {
     }
   }
 
+  // Send filter back to feed page when there is an update
   useEffect(() => {
     const currentState = {
       minPrice, maxPrice, bedrooms, area
@@ -38,8 +43,9 @@ const Filter = (props) => {
       setOldFilter(currentState)
       props.updateFilter(currentState)
     }
-  }, [minPrice, maxPrice, bedrooms, area, props, oldFilter])
+  }, [minPrice, maxPrice, bedrooms, area, oldFilter, props])
 
+  // When we enable/disable the toggle update the filter in feeds
   const toggleSwitch = (state) => {
     setToggleState(state);
     if (state) {

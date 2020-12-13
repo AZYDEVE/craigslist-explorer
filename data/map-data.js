@@ -49,4 +49,20 @@ const cleanData = async () => {
   // writeJson('data/neighborhood.json', allUniqueNeighborhood);
 }
 
-cleanData();
+// cleanData();
+
+const convertToArray = () => {
+  const original = readJson("data/result-neighborhood.json");
+
+  const result = [];
+
+  const keys = Object.keys(original);
+  for (let index = 0; index < keys.length; index++) {
+    original[keys[index]].name = keys[index];
+    result.push(original[keys[index]])
+  }
+
+  writeJson('data/result-neighborhood-2.json', result);
+}
+
+convertToArray();

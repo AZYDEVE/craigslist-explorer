@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./toggle.css";
 
 const Toggle = (props) => {
+
   const [toggleClass, setToggleClass] = useState("off");
 
-  const setInitialState = () => {
+  // Get initial state of parent element
+  // Default value is false
+  const setToggleState = () => {
     if (props.enabled) {
       toggleSwitch(true);
     } else {
@@ -12,8 +15,9 @@ const Toggle = (props) => {
     }
   }
 
-  useEffect(setInitialState, [props.enabled])
+  useEffect(setToggleState, [props.enabled])
 
+  // Toggle the classNames
   const toggleSwitch = (state) => {
     if (state) {
       setToggleClass('on');

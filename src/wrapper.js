@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './index.css';
 import { Switch, Route, HashRouter as Router } from "react-router-dom";
-
-import { login, logout, test } from './api/user'
+import { login, logout } from './api/user'
+import './index.css';
 
 // views
 import Feed from "./views/feed";
@@ -15,8 +14,9 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import FeedAside from "./components/feed-aside";
 
-function App() {
+const App = () => {
   const [user, setUser] = useState(null);
+  const [post, setPost] = useState(null);
 
   const getUser = () => {
     login()
@@ -51,12 +51,12 @@ function App() {
       <div role="main" id="craigslist-body" className="craigslist-body">
         <Switch>
           <Route exact path="/">
-            <FeedAside />
-            <Feed />
+            <FeedAside post={post} />
+            <Feed postLoaded={setPost} />
           </Route>
           <Route path="/post/:postId" >
-            <FeedAside />
-            <Post user={user} />
+            <FeedAside post={post} />
+            <Post postLoaded={setPost} user={user} />
           </Route>
           <Route path="/login" >
             <Authenticate loginSuccess={loginSuccess} />

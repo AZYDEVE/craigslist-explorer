@@ -14,6 +14,7 @@
   line-height: 24px;
   border-right: 1px #d0d0d0 solid;
 }
+
 .filter .toggle-wrapper .toggle {
   margin-left: 10px;
 }
@@ -27,6 +28,7 @@
   padding: 0 20px;
   border-right: 1px #d0d0d0 solid;
 }
+
 .filter .area input,
 .filter .price input {
   margin-left: 2px;
@@ -34,6 +36,7 @@
   border: 1px #d0d0d0 solid;
   border-radius: 2px;
 }
+
 .filter .bedrooms span,
 .filter .minimize span,
 .filter .area span,

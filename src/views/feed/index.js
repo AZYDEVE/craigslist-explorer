@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./feed.css";
 import { getPosts } from "../../api/posts";
 import PostList from "../../components/post-list";
@@ -8,20 +8,18 @@ import Sort from "../../components/sort";
 import ReactPaginate from "react-paginate";
 
 const Feed = (props) => {
+
   const [posts, setPosts] = useState([]);
   const [amountOfPosts, setAmountOfPosts] = useState(0);
-  // const [searchThreads, setSearchThreads] = useState([]);
-
   const [dataAvailable, setDataAvailable] = useState(false);
-  // const [searchDone, setSearchDone] = useState(false);
-  // const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
-
   const [filter, setFilter] = useState({});
   const [sorting, setSorting] = useState({});
 
-  const requestPosts = () => {
+  const requestPosts = useCallback(() => {
+    // Show spinner
     setDataAvailable(false);
+
     getPosts(filter, sorting, currentPage)
       .then((response) => {
 
@@ -43,39 +41,29 @@ const Feed = (props) => {
         setDataAvailable(true);
       })
       .catch((err) => {
-        // TODO: Show error message
         console.error("Failed to get all threads", err);
       });
-  }
 
-  const updateFilter = (filter) => {
-    setFilter(filter);
-  }
+  }, [currentPage, filter, sorting]);
 
-  const updateSorting = (sorting) => {
-    setSorting(sorting);
-  }
-
-  function handlePageClick({ selected: selectedPage }) {
-    setCurrentPage(selectedPage);
-  }
-
-  useEffect(requestPosts, [filter, sorting, currentPage])
-
-  useEffect(() => {
-    setCurrentPage(0);
-  }, [filter, sorting])
+  const handlePageClick = ({ selected: selectedPage }) => setCurrentPage(selectedPage);
 
   const initialLoad = () => {
     requestPosts();
+    if (props.postLoaded) (
+      props.postLoaded(null)
+    )
   }
-  useEffect(initialLoad, []);
+
+  useEffect(() => { setCurrentPage(0); }, [filter, sorting])
+  useEffect(requestPosts, [filter, sorting, currentPage, requestPosts])
+  useEffect(initialLoad, [props, requestPosts]);
 
   return (
     <div className="feed">
-      <Filter updateFilter={updateFilter} />
+      <Filter updateFilter={setFilter} />
       <div className='feed-smaller'>
-        <Sort updateSorting={updateSorting} />
+        <Sort updateSorting={setSorting} />
         {
           dataAvailable ?
             <PostList posts={posts} />

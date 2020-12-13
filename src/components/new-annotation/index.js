@@ -14,6 +14,7 @@ const NewAnnotation = (props) => {
   useEffect(initialSetup, [props.postId]);
 
   const handleClick = () => {
+
     var payload = {
       postId: postId,
       message: message,
@@ -22,10 +23,11 @@ const NewAnnotation = (props) => {
     addAnnotation(payload)
       .then((response) => {
         if (response.status === 200) {
+
           // link to post page
-          const data = response.data;
-          props.success(data);
-          // clear data
+          props.success(response.data);
+
+          // clear message field
           setMessage("");
         } else if (response.status === 202) {
           setError(response.data);

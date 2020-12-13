@@ -1,0 +1,2429 @@
+[
+  {
+    "location": {
+      "lat": 37.7595969,
+      "lng": -122.4352004
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.76094588029149,
+        "lng": -122.4338514197085
+      },
+      "southwest": {
+        "lat": 37.7582479197085,
+        "lng": -122.4365493802915
+      }
+    },
+    "name": "castro upper market"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7566307,
+        "lng": -122.4241842
+      },
+      "southwest": {
+        "lat": 37.7414804,
+        "lng": -122.4447705
+      }
+    },
+    "location": {
+      "lat": 37.7502378,
+      "lng": -122.4337029
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7566307,
+        "lng": -122.4241842
+      },
+      "southwest": {
+        "lat": 37.7414804,
+        "lng": -122.4447705
+      }
+    },
+    "name": "noe valley"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7719876,
+        "lng": -122.4027825
+      },
+      "southwest": {
+        "lat": 37.7478217,
+        "lng": -122.4309111
+      }
+    },
+    "location": {
+      "lat": 37.7598648,
+      "lng": -122.4147977
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7719876,
+        "lng": -122.4027825
+      },
+      "southwest": {
+        "lat": 37.7478217,
+        "lng": -122.4309111
+      }
+    },
+    "name": "mission district"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.761036,
+        "lng": -122.4410394
+      },
+      "southwest": {
+        "lat": 37.7454662,
+        "lng": -122.4615271
+      }
+    },
+    "location": {
+      "lat": 37.7544066,
+      "lng": -122.4476845
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.761036,
+        "lng": -122.4410394
+      },
+      "southwest": {
+        "lat": 37.7454662,
+        "lng": -122.4615271
+      }
+    },
+    "name": "Twin Peaks"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.8054834,
+        "lng": -122.4022486
+      },
+      "southwest": {
+        "lat": 37.7978502,
+        "lng": -122.4101484
+      }
+    },
+    "location": {
+      "lat": 37.8013407,
+      "lng": -122.4056674
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.8054834,
+        "lng": -122.4022486
+      },
+      "southwest": {
+        "lat": 37.7978502,
+        "lng": -122.4101484
+      }
+    },
+    "name": "north beach telegraph hill"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.9298239,
+        "lng": -122.28178
+      },
+      "southwest": {
+        "lat": 37.6398299,
+        "lng": -123.173825
+      }
+    },
+    "location": {
+      "lat": 37.7749295,
+      "lng": -122.4194155
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.812,
+        "lng": -122.3482
+      },
+      "southwest": {
+        "lat": 37.70339999999999,
+        "lng": -122.527
+      }
+    },
+    "name": "San Francisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.9298239,
+        "lng": -122.28178
+      },
+      "southwest": {
+        "lat": 37.6398299,
+        "lng": -123.173825
+      }
+    },
+    "location": {
+      "lat": 37.7749295,
+      "lng": -122.4194155
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.812,
+        "lng": -122.3482
+      },
+      "southwest": {
+        "lat": 37.70339999999999,
+        "lng": -122.527
+      }
+    },
+    "name": "San Francisco, CA"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7613184,
+        "lng": -122.4438929
+      },
+      "southwest": {
+        "lat": 37.745716,
+        "lng": -122.4509701
+      }
+    },
+    "location": {
+      "lat": 37.75341450000001,
+      "lng": -122.4481779
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7613184,
+        "lng": -122.4438929
+      },
+      "southwest": {
+        "lat": 37.745716,
+        "lng": -122.4509701
+      }
+    },
+    "name": "twin peaks diamond hts"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.767529,
+        "lng": -122.4424823
+      },
+      "southwest": {
+        "lat": 37.7587052,
+        "lng": -122.4577947
+      }
+    },
+    "location": {
+      "lat": 37.7653275,
+      "lng": -122.4453083
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.767529,
+        "lng": -122.4424823
+      },
+      "southwest": {
+        "lat": 37.7587052,
+        "lng": -122.4577947
+      }
+    },
+    "name": "Ashbury Heights"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7688659,
+        "lng": -122.4476265
+      },
+      "southwest": {
+        "lat": 37.7607915,
+        "lng": -122.4577975
+      }
+    },
+    "location": {
+      "lat": 37.7650406,
+      "lng": -122.4502301
+    },
+    "location_type": "APPROXIMATE",
+    "viewport": {
+      "northeast": {
+        "lat": 37.7688659,
+        "lng": -122.4476265
+      },
+      "southwest": {
+        "lat": 37.7607915,
+        "lng": -122.4577975
+      }
+    },
+    "name": "cole valley ashbury hts"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7789688,
+        "lng": -122.4207344
+      },
+      "southwest": {
+        "lat": 37.7704571,
+        "lng": -122.4299304
+      }
+    },
+    "location": {
+      "lat": 37.7759073,
+      "lng": -122.4245247
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7789688,
+        "lng": -122.4207344
+      },
+      "southwest": {
+        "lat": 37.7704571,
+        "lng": -122.4299304
+      }
+    },
+    "name": "hayes valley"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7744292,
+        "lng": -122.4267049
+      },
+      "southwest": {
+        "lat": 37.7690135,
+        "lng": -122.4407172
+      }
+    },
+    "location": {
+      "lat": 37.7720656,
+      "lng": -122.4311526
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7744292,
+        "lng": -122.4267049
+      },
+      "southwest": {
+        "lat": 37.7690135,
+        "lng": -122.4407172
+      }
+    },
+    "name": "lower haight"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.774107,
+        "lng": -122.4358098
+      },
+      "southwest": {
+        "lat": 37.7658804,
+        "lng": -122.4538708
+      }
+    },
+    "location": {
+      "lat": 37.7692204,
+      "lng": -122.4481393
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.774107,
+        "lng": -122.4358098
+      },
+      "southwest": {
+        "lat": 37.7658804,
+        "lng": -122.4538708
+      }
+    },
+    "name": "haight ashbury"
+  },
+  {
+    "location": {
+      "lat": 37.7763694,
+      "lng": -122.434819
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7777183802915,
+        "lng": -122.4334700197085
+      },
+      "southwest": {
+        "lat": 37.7750204197085,
+        "lng": -122.4361679802915
+      }
+    },
+    "name": "alamo square nopa"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7898451,
+        "lng": -122.3898115
+      },
+      "southwest": {
+        "lat": 37.789803,
+        "lng": -122.3898645
+      }
+    },
+    "location": {
+      "lat": 37.789823,
+      "lng": -122.3898411
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7911730302915,
+        "lng": -122.3884890197085
+      },
+      "southwest": {
+        "lat": 37.7884750697085,
+        "lng": -122.3911869802915
+      }
+    },
+    "name": "SOMA south beach"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7804898,
+        "lng": -122.4279172
+      },
+      "southwest": {
+        "lat": 37.7749995,
+        "lng": -122.4387896
+      }
+    },
+    "location": {
+      "lat": 37.7774994,
+      "lng": -122.433252
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7804898,
+        "lng": -122.4279172
+      },
+      "southwest": {
+        "lat": 37.7749995,
+        "lng": -122.4387896
+      }
+    },
+    "name": "Alamo Square, San Francisco"
+  },
+  {
+    "location": {
+      "lat": 37.7775056,
+      "lng": -122.4242611
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.77885458029149,
+        "lng": -122.4229121197085
+      },
+      "southwest": {
+        "lat": 37.7761566197085,
+        "lng": -122.4256100802915
+      }
+    },
+    "name": "downtown civic van ness"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.9066895,
+        "lng": -122.2341961
+      },
+      "southwest": {
+        "lat": 37.8356375,
+        "lng": -122.3686793
+      }
+    },
+    "location": {
+      "lat": 37.8715226,
+      "lng": -122.273042
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.9066895,
+        "lng": -122.2341961
+      },
+      "southwest": {
+        "lat": 37.8356375,
+        "lng": -122.3686793
+      }
+    },
+    "name": "berkeley"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7671385,
+        "lng": -122.3792018
+      },
+      "southwest": {
+        "lat": 37.7493936,
+        "lng": -122.4060661
+      }
+    },
+    "location": {
+      "lat": 37.7604929,
+      "lng": -122.400869
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7671385,
+        "lng": -122.3792018
+      },
+      "southwest": {
+        "lat": 37.7493936,
+        "lng": -122.4060661
+      }
+    },
+    "name": "potrero hill"
+  },
+  {
+    "location": {
+      "lat": 37.7765643,
+      "lng": -122.4507187
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7779132802915,
+        "lng": -122.4493697197085
+      },
+      "southwest": {
+        "lat": 37.7752153197085,
+        "lng": -122.4520676802915
+      }
+    },
+    "name": "USF panhandle"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.78995580000001,
+        "lng": -122.4247343
+      },
+      "southwest": {
+        "lat": 37.782629,
+        "lng": -122.4468176
+      }
+    },
+    "location": {
+      "lat": 37.786997,
+      "lng": -122.4368151
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.78995580000001,
+        "lng": -122.4247343
+      },
+      "southwest": {
+        "lat": 37.782629,
+        "lng": -122.4468176
+      }
+    },
+    "name": "lower pac hts"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7671385,
+        "lng": -122.3792018
+      },
+      "southwest": {
+        "lat": 37.7493936,
+        "lng": -122.4060661
+      }
+    },
+    "location": {
+      "lat": 37.7604929,
+      "lng": -122.400869
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7671385,
+        "lng": -122.3792018
+      },
+      "southwest": {
+        "lat": 37.7493936,
+        "lng": -122.4060661
+      }
+    },
+    "name": "Potrero Hill"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7890379,
+        "lng": -122.4464742
+      },
+      "southwest": {
+        "lat": 37.7728702,
+        "lng": -122.4787644
+      }
+    },
+    "location": {
+      "lat": 37.7809537,
+      "lng": -122.4672558
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7890379,
+        "lng": -122.4464742
+      },
+      "southwest": {
+        "lat": 37.7728702,
+        "lng": -122.4787644
+      }
+    },
+    "name": "inner richmond"
+  },
+  {
+    "location": {
+      "lat": 37.7627248,
+      "lng": -122.4578922
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7640737802915,
+        "lng": -122.4565432197085
+      },
+      "southwest": {
+        "lat": 37.7613758197085,
+        "lng": -122.4592411802915
+      }
+    },
+    "name": "inner sunset UCSF"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7493884,
+        "lng": -122.4035763
+      },
+      "southwest": {
+        "lat": 37.73145239999999,
+        "lng": -122.4355719
+      }
+    },
+    "location": {
+      "lat": 37.7389496,
+      "lng": -122.4152013
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7493884,
+        "lng": -122.4035763
+      },
+      "southwest": {
+        "lat": 37.73145239999999,
+        "lng": -122.4355719
+      }
+    },
+    "name": "bernal heights"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7920497,
+        "lng": -122.4082494
+      },
+      "southwest": {
+        "lat": 37.7861189,
+        "lng": -122.4190664
+      }
+    },
+    "location": {
+      "lat": 37.7889945,
+      "lng": -122.4109272
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7920497,
+        "lng": -122.4082494
+      },
+      "southwest": {
+        "lat": 37.7861189,
+        "lng": -122.4190664
+      }
+    },
+    "name": "lower nob hill"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7903498,
+        "lng": -122.4195038
+      },
+      "southwest": {
+        "lat": 37.7729898,
+        "lng": -122.4476754
+      }
+    },
+    "location": {
+      "lat": 37.7822112,
+      "lng": -122.4341781
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7903498,
+        "lng": -122.4195038
+      },
+      "southwest": {
+        "lat": 37.7729898,
+        "lng": -122.4476754
+      }
+    },
+    "name": "western addition"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.79760570000001,
+        "lng": -122.4223334
+      },
+      "southwest": {
+        "lat": 37.7872507,
+        "lng": -122.4476556
+      }
+    },
+    "location": {
+      "lat": 37.7925153,
+      "lng": -122.4382307
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.79760570000001,
+        "lng": -122.4223334
+      },
+      "southwest": {
+        "lat": 37.7872507,
+        "lng": -122.4476556
+      }
+    },
+    "name": "pacific heights"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7912526,
+        "lng": -122.4492453
+      },
+      "southwest": {
+        "lat": 37.785192,
+        "lng": -122.4510655
+      }
+    },
+    "location": {
+      "lat": 37.7877759,
+      "lng": -122.4503177
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7912526,
+        "lng": -122.4488064197085
+      },
+      "southwest": {
+        "lat": 37.785192,
+        "lng": -122.4515043802915
+      }
+    },
+    "name": "laurel hts presidio"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.742618,
+        "lng": -122.4240236
+      },
+      "southwest": {
+        "lat": 37.73320160000001,
+        "lng": -122.4401841
+      }
+    },
+    "location": {
+      "lat": 37.73777150000001,
+      "lng": -122.4321041
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.742618,
+        "lng": -122.4240236
+      },
+      "southwest": {
+        "lat": 37.73320160000001,
+        "lng": -122.4401841
+      }
+    },
+    "name": "glen park"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7436301,
+        "lng": -122.4596819
+      },
+      "southwest": {
+        "lat": 37.7349733,
+        "lng": -122.4712834
+      }
+    },
+    "location": {
+      "lat": 37.7416783,
+      "lng": -122.4679536
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7436301,
+        "lng": -122.4596819
+      },
+      "southwest": {
+        "lat": 37.7349733,
+        "lng": -122.4712834
+      }
+    },
+    "name": "west portal forest hill"
+  },
+  {
+    "location": {
+      "lat": 37.7241492,
+      "lng": -122.4799405
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7254981802915,
+        "lng": -122.4785915197085
+      },
+      "southwest": {
+        "lat": 37.7228002197085,
+        "lng": -122.4812894802915
+      }
+    },
+    "name": "ingleside SFSU CCSF"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7643554,
+        "lng": -122.3864965
+      },
+      "southwest": {
+        "lat": 37.7500933,
+        "lng": -122.3926223
+      }
+    },
+    "location": {
+      "lat": 37.7591221,
+      "lng": -122.3895378
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7643554,
+        "lng": -122.3864965
+      },
+      "southwest": {
+        "lat": 37.7500933,
+        "lng": -122.3926223
+      }
+    },
+    "name": "Dogpatch"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.8068324,
+        "lng": -122.415579
+      },
+      "southwest": {
+        "lat": 37.77598450000001,
+        "lng": -122.424074
+      }
+    },
+    "location": {
+      "lat": 37.7913505,
+      "lng": -122.4208506
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.8068324,
+        "lng": -122.415579
+      },
+      "southwest": {
+        "lat": 37.77598450000001,
+        "lng": -122.424074
+      }
+    },
+    "name": "Polk Gulch"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7351756,
+        "lng": -122.4002633
+      },
+      "southwest": {
+        "lat": 37.7189673,
+        "lng": -122.423782
+      }
+    },
+    "location": {
+      "lat": 37.73021140000001,
+      "lng": -122.4090824
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7351756,
+        "lng": -122.4002633
+      },
+      "southwest": {
+        "lat": 37.7189673,
+        "lng": -122.423782
+      }
+    },
+    "name": "portola district"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.805986,
+        "lng": -122.4067444
+      },
+      "southwest": {
+        "lat": 37.7957119,
+        "lng": -122.4251642
+      }
+    },
+    "location": {
+      "lat": 37.80105959999999,
+      "lng": -122.4194486
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.805986,
+        "lng": -122.4067444
+      },
+      "southwest": {
+        "lat": 37.7957119,
+        "lng": -122.4251642
+      }
+    },
+    "name": "russian hill"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.8092154,
+        "lng": -122.4245649
+      },
+      "southwest": {
+        "lat": 37.7984545,
+        "lng": -122.450384
+      }
+    },
+    "location": {
+      "lat": 37.8036667,
+      "lng": -122.4368151
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.8092154,
+        "lng": -122.4245649
+      },
+      "southwest": {
+        "lat": 37.7984545,
+        "lng": -122.450384
+      }
+    },
+    "name": "marina cow hollow"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7973995,
+        "lng": -122.408789
+      },
+      "southwest": {
+        "lat": 37.788488,
+        "lng": -122.4234351
+      }
+    },
+    "location": {
+      "lat": 37.793014,
+      "lng": -122.416113
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7973995,
+        "lng": -122.408789
+      },
+      "southwest": {
+        "lat": 37.788488,
+        "lng": -122.4234351
+      }
+    },
+    "name": "nob hill"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7973995,
+        "lng": -122.408789
+      },
+      "southwest": {
+        "lat": 37.788488,
+        "lng": -122.4234351
+      }
+    },
+    "location": {
+      "lat": 37.793014,
+      "lng": -122.416113
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7973995,
+        "lng": -122.408789
+      },
+      "southwest": {
+        "lat": 37.788488,
+        "lng": -122.4234351
+      }
+    },
+    "name": "Nob Hill"
+  },
+  {
+    "location": {
+      "lat": 37.7926541,
+      "lng": -122.4145183
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7940030802915,
+        "lng": -122.4131693197085
+      },
+      "southwest": {
+        "lat": 37.7913051197085,
+        "lng": -122.4158672802915
+      }
+    },
+    "name": "Nob Hill Tower"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7522488,
+        "lng": -122.3569669
+      },
+      "southwest": {
+        "lat": 37.7083844,
+        "lng": -122.4080732
+      }
+    },
+    "location": {
+      "lat": 37.730416,
+      "lng": -122.384424
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7522488,
+        "lng": -122.3569669
+      },
+      "southwest": {
+        "lat": 37.7083844,
+        "lng": -122.4080732
+      }
+    },
+    "name": "bayview"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.798916,
+        "lng": -122.3951365
+      },
+      "southwest": {
+        "lat": 37.7866303,
+        "lng": -122.4070479
+      }
+    },
+    "location": {
+      "lat": 37.7945742,
+      "lng": -122.3999445
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.798916,
+        "lng": -122.3951365
+      },
+      "southwest": {
+        "lat": 37.7866303,
+        "lng": -122.4070479
+      }
+    },
+    "name": "downtown FiDi nob hill"
+  },
+  {
+    "location": {
+      "lat": 37.7796734,
+      "lng": -122.482907
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7884918,
+        "lng": -122.4668996
+      },
+      "southwest": {
+        "lat": 37.7708539,
+        "lng": -122.4989144
+      }
+    },
+    "name": "richmond seacliff"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.798916,
+        "lng": -122.3951365
+      },
+      "southwest": {
+        "lat": 37.7866303,
+        "lng": -122.4070479
+      }
+    },
+    "location": {
+      "lat": 37.7945742,
+      "lng": -122.3999445
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.798916,
+        "lng": -122.3951365
+      },
+      "southwest": {
+        "lat": 37.7866303,
+        "lng": -122.4070479
+      }
+    },
+    "name": "financial district"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.778824,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7640878,
+        "lng": -122.3996204
+      }
+    },
+    "location": {
+      "lat": 37.7706281,
+      "lng": -122.3911664
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.778824,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7640878,
+        "lng": -122.3996204
+      }
+    },
+    "name": "Mission Bay"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.9298239,
+        "lng": -122.28178
+      },
+      "southwest": {
+        "lat": 37.6398299,
+        "lng": -123.173825
+      }
+    },
+    "location": {
+      "lat": 37.7749295,
+      "lng": -122.4194155
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.812,
+        "lng": -122.3482
+      },
+      "southwest": {
+        "lat": 37.70339999999999,
+        "lng": -122.527
+      }
+    },
+    "name": ""
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7525189,
+        "lng": -122.4694708
+      },
+      "southwest": {
+        "lat": 37.7338485,
+        "lng": -122.5091919
+      }
+    },
+    "location": {
+      "lat": 37.742459,
+      "lng": -122.489642
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7525189,
+        "lng": -122.4694708
+      },
+      "southwest": {
+        "lat": 37.7338485,
+        "lng": -122.5091919
+      }
+    },
+    "name": "sunset parkside"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.6728499,
+        "lng": -122.2205311
+      },
+      "southwest": {
+        "lat": 37.6324597,
+        "lng": -122.471684
+      }
+    },
+    "location": {
+      "lat": 37.654656,
+      "lng": -122.4077498
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.6728499,
+        "lng": -122.2205311
+      },
+      "southwest": {
+        "lat": 37.6324597,
+        "lng": -122.471684
+      }
+    },
+    "name": "south san francisco"
+  },
+  {
+    "location": {
+      "lat": 37.7185461,
+      "lng": -122.4397597
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7198950802915,
+        "lng": -122.4384107197085
+      },
+      "southwest": {
+        "lat": 37.7171971197085,
+        "lng": -122.4411086802915
+      }
+    },
+    "name": "excelsior outer mission"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7320309,
+        "lng": -122.4602751
+      },
+      "southwest": {
+        "lat": 37.7249184,
+        "lng": -122.4677137
+      }
+    },
+    "location": {
+      "lat": 37.7283105,
+      "lng": -122.4630004
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7320309,
+        "lng": -122.4602751
+      },
+      "southwest": {
+        "lat": 37.7249184,
+        "lng": -122.4677137
+      }
+    },
+    "name": "Mt. Davisdon Manor near K-line stop"
+  },
+  {
+    "location": {
+      "lat": 37.7947612,
+      "lng": -122.4178518
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.79611018029149,
+        "lng": -122.4165028197085
+      },
+      "southwest": {
+        "lat": 37.79341221970849,
+        "lng": -122.4192007802915
+      }
+    },
+    "name": "1390 Jackson street"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7831007,
+        "lng": -122.3921657
+      },
+      "southwest": {
+        "lat": 37.7800501,
+        "lng": -122.3959229
+      }
+    },
+    "location": {
+      "lat": 37.7815501,
+      "lng": -122.3940353
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7831007,
+        "lng": -122.3921657
+      },
+      "southwest": {
+        "lat": 37.7800501,
+        "lng": -122.3959229
+      }
+    },
+    "name": "South Park"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.79788509999999,
+        "lng": -122.4196539
+      },
+      "southwest": {
+        "lat": 37.7880024,
+        "lng": -122.4223997
+      }
+    },
+    "location": {
+      "lat": 37.7923909,
+      "lng": -122.4210761
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.79788509999999,
+        "lng": -122.4196539
+      },
+      "southwest": {
+        "lat": 37.7880024,
+        "lng": -122.4223997
+      }
+    },
+    "name": "Polk Gulch, Nob Hill"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.79760570000001,
+        "lng": -122.4223334
+      },
+      "southwest": {
+        "lat": 37.7872507,
+        "lng": -122.4476556
+      }
+    },
+    "location": {
+      "lat": 37.7925153,
+      "lng": -122.4382307
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.79760570000001,
+        "lng": -122.4223334
+      },
+      "southwest": {
+        "lat": 37.7872507,
+        "lng": -122.4476556
+      }
+    },
+    "name": "Pacific Heights"
+  },
+  {
+    "location": {
+      "lat": 38.01777850000001,
+      "lng": -121.816168
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 38.01912748029151,
+        "lng": -121.8148190197085
+      },
+      "southwest": {
+        "lat": 38.01642951970851,
+        "lng": -121.8175169802915
+      }
+    },
+    "name": "pittsburg antioch"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.778824,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7640878,
+        "lng": -122.3996204
+      }
+    },
+    "location": {
+      "lat": 37.7706281,
+      "lng": -122.3911664
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.778824,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7640878,
+        "lng": -122.3996204
+      }
+    },
+    "name": "Mission Bay, San Francisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7917063,
+        "lng": -122.4468189
+      },
+      "southwest": {
+        "lat": 37.7856776,
+        "lng": -122.4595079
+      }
+    },
+    "location": {
+      "lat": 37.7889125,
+      "lng": -122.4538009
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7917063,
+        "lng": -122.4468189
+      },
+      "southwest": {
+        "lat": 37.7856776,
+        "lng": -122.4595079
+      }
+    },
+    "name": "Presidio Heights"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7920497,
+        "lng": -122.4082494
+      },
+      "southwest": {
+        "lat": 37.7861189,
+        "lng": -122.4190664
+      }
+    },
+    "location": {
+      "lat": 37.7889945,
+      "lng": -122.4109272
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7920497,
+        "lng": -122.4082494
+      },
+      "southwest": {
+        "lat": 37.7861189,
+        "lng": -122.4190664
+      }
+    },
+    "name": "Lower Nob Hill"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.9298239,
+        "lng": -122.28178
+      },
+      "southwest": {
+        "lat": 37.6398299,
+        "lng": -123.173825
+      }
+    },
+    "location": {
+      "lat": 37.7749295,
+      "lng": -122.4194155
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.812,
+        "lng": -122.3482
+      },
+      "southwest": {
+        "lat": 37.70339999999999,
+        "lng": -122.527
+      }
+    },
+    "name": "san francisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.76623,
+        "lng": -122.4566711
+      },
+      "southwest": {
+        "lat": 37.7338485,
+        "lng": -122.51146
+      }
+    },
+    "location": {
+      "lat": 37.7467314,
+      "lng": -122.4863492
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.76623,
+        "lng": -122.4566711
+      },
+      "southwest": {
+        "lat": 37.7338485,
+        "lng": -122.51146
+      }
+    },
+    "name": "Sunset, San Francisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7878162,
+        "lng": -122.4046888
+      },
+      "southwest": {
+        "lat": 37.780043,
+        "lng": -122.421416
+      }
+    },
+    "location": {
+      "lat": 37.7846598,
+      "lng": -122.4145058
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7878162,
+        "lng": -122.4046888
+      },
+      "southwest": {
+        "lat": 37.780043,
+        "lng": -122.421416
+      }
+    },
+    "name": "tenderloin"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7957,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7659314,
+        "lng": -122.4233804
+      }
+    },
+    "location": {
+      "lat": 37.7785189,
+      "lng": -122.4056395
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7957,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7659314,
+        "lng": -122.4233804
+      }
+    },
+    "name": "South of Market"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7840285,
+        "lng": -122.4065566
+      },
+      "southwest": {
+        "lat": 37.7762779,
+        "lng": -122.4163628
+      }
+    },
+    "location": {
+      "lat": 37.7804684,
+      "lng": -122.412455
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7840285,
+        "lng": -122.4065566
+      },
+      "southwest": {
+        "lat": 37.7762779,
+        "lng": -122.4163628
+      }
+    },
+    "name": "Mid Market"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.78995580000001,
+        "lng": -122.4247343
+      },
+      "southwest": {
+        "lat": 37.782629,
+        "lng": -122.4468176
+      }
+    },
+    "location": {
+      "lat": 37.786997,
+      "lng": -122.4368151
+    },
+    "location_type": "APPROXIMATE",
+    "viewport": {
+      "northeast": {
+        "lat": 37.78995580000001,
+        "lng": -122.4247343
+      },
+      "southwest": {
+        "lat": 37.782629,
+        "lng": -122.4468176
+      }
+    },
+    "name": "Lower Pacific Heights"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7359664,
+        "lng": -122.4360858
+      },
+      "southwest": {
+        "lat": 37.7228234,
+        "lng": -122.4534955
+      }
+    },
+    "location": {
+      "lat": 37.7307126,
+      "lng": -122.4466081
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7359664,
+        "lng": -122.4360858
+      },
+      "southwest": {
+        "lat": 37.7228234,
+        "lng": -122.4534955
+      }
+    },
+    "name": "SunnySideSan Francisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7359664,
+        "lng": -122.4360858
+      },
+      "southwest": {
+        "lat": 37.7228234,
+        "lng": -122.4534955
+      }
+    },
+    "location": {
+      "lat": 37.7307126,
+      "lng": -122.4466081
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7359664,
+        "lng": -122.4360858
+      },
+      "southwest": {
+        "lat": 37.7228234,
+        "lng": -122.4534955
+      }
+    },
+    "name": "SunnySide"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7663729,
+        "lng": -122.4514015
+      },
+      "southwest": {
+        "lat": 37.7486789,
+        "lng": -122.477206
+      }
+    },
+    "location": {
+      "lat": 37.7601644,
+      "lng": -122.4703434
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7663729,
+        "lng": -122.4514015
+      },
+      "southwest": {
+        "lat": 37.7486789,
+        "lng": -122.477206
+      }
+    },
+    "name": "inner sunset"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7393537,
+        "lng": -122.4651232
+      },
+      "southwest": {
+        "lat": 37.7331787,
+        "lng": -122.4665384
+      }
+    },
+    "location": {
+      "lat": 37.7362928,
+      "lng": -122.4662976
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7393537,
+        "lng": -122.4644818197085
+      },
+      "southwest": {
+        "lat": 37.7331787,
+        "lng": -122.4671797802915
+      }
+    },
+    "name": "santa clara"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7322927,
+        "lng": -122.4205345
+      },
+      "southwest": {
+        "lat": 37.7314413,
+        "lng": -122.4208885
+      }
+    },
+    "location": {
+      "lat": 37.7318347,
+      "lng": -122.4206718
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7332159802915,
+        "lng": -122.4193625197085
+      },
+      "southwest": {
+        "lat": 37.7305180197085,
+        "lng": -122.4220604802915
+      }
+    },
+    "name": "St. Marys Park"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.742618,
+        "lng": -122.4240236
+      },
+      "southwest": {
+        "lat": 37.73320160000001,
+        "lng": -122.4401841
+      }
+    },
+    "location": {
+      "lat": 37.73777150000001,
+      "lng": -122.4321041
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.742618,
+        "lng": -122.4240236
+      },
+      "southwest": {
+        "lat": 37.73320160000001,
+        "lng": -122.4401841
+      }
+    },
+    "name": "Glen Park"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7796438,
+        "lng": -122.4376555
+      },
+      "southwest": {
+        "lat": 37.7729898,
+        "lng": -122.4470475
+      }
+    },
+    "location": {
+      "lat": 37.7757272,
+      "lng": -122.4424773
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7796438,
+        "lng": -122.4376555
+      },
+      "southwest": {
+        "lat": 37.7729898,
+        "lng": -122.4470475
+      }
+    },
+    "name": "NOPA"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7957,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7659314,
+        "lng": -122.4233804
+      }
+    },
+    "location": {
+      "lat": 37.7785189,
+      "lng": -122.4056395
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7957,
+        "lng": -122.3814559
+      },
+      "southwest": {
+        "lat": 37.7659314,
+        "lng": -122.4233804
+      }
+    },
+    "name": "SoMa"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.783381,
+        "lng": -122.4387896
+      },
+      "southwest": {
+        "lat": 37.7786369,
+        "lng": -122.4476419
+      }
+    },
+    "location": {
+      "lat": 37.7808685,
+      "lng": -122.4431851
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.783381,
+        "lng": -122.4387896
+      },
+      "southwest": {
+        "lat": 37.7786369,
+        "lng": -122.4476419
+      }
+    },
+    "name": "Anza Vista"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.469887,
+        "lng": -122.0446721
+      },
+      "southwest": {
+        "lat": 37.3567832,
+        "lng": -122.1178619
+      }
+    },
+    "location": {
+      "lat": 37.3860517,
+      "lng": -122.0838511
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.469887,
+        "lng": -122.0446721
+      },
+      "southwest": {
+        "lat": 37.3567832,
+        "lng": -122.1178619
+      }
+    },
+    "name": "Mountain View"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7823828,
+        "lng": -122.4464742
+      },
+      "southwest": {
+        "lat": 37.7743064,
+        "lng": -122.4588593
+      }
+    },
+    "location": {
+      "lat": 37.7770049,
+      "lng": -122.4538009
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7823828,
+        "lng": -122.4464742
+      },
+      "southwest": {
+        "lat": 37.7743064,
+        "lng": -122.4588593
+      }
+    },
+    "name": "Lone Mountain"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.6021349,
+        "lng": -122.275478
+      },
+      "southwest": {
+        "lat": 37.510937,
+        "lng": -122.3557821
+      }
+    },
+    "location": {
+      "lat": 37.5629917,
+      "lng": -122.3255254
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.6021349,
+        "lng": -122.275478
+      },
+      "southwest": {
+        "lat": 37.510937,
+        "lng": -122.3557821
+      }
+    },
+    "name": "san mateo"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7295395,
+        "lng": -122.4339839
+      },
+      "southwest": {
+        "lat": 37.7255111,
+        "lng": -122.4410618
+      }
+    },
+    "location": {
+      "lat": 37.7273786,
+      "lng": -122.4372079
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7295395,
+        "lng": -122.4339839
+      },
+      "southwest": {
+        "lat": 37.7255111,
+        "lng": -122.4410618
+      }
+    },
+    "name": "santa rosa"
+  },
+  {
+    "location": {
+      "lat": 37.7016477,
+      "lng": -121.8992171
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7029966802915,
+        "lng": -121.8978681197085
+      },
+      "southwest": {
+        "lat": 37.7002987197085,
+        "lng": -121.9005660802915
+      }
+    },
+    "name": "dublin pleasanton livermore"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.9298239,
+        "lng": -122.28178
+      },
+      "southwest": {
+        "lat": 37.6398299,
+        "lng": -123.173825
+      }
+    },
+    "location": {
+      "lat": 37.7749295,
+      "lng": -122.4194155
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.812,
+        "lng": -122.3482
+      },
+      "southwest": {
+        "lat": 37.70339999999999,
+        "lng": -122.527
+      }
+    },
+    "name": "San Fransisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7804898,
+        "lng": -122.4279172
+      },
+      "southwest": {
+        "lat": 37.7749995,
+        "lng": -122.4387896
+      }
+    },
+    "location": {
+      "lat": 37.7774994,
+      "lng": -122.433252
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7804898,
+        "lng": -122.4279172
+      },
+      "southwest": {
+        "lat": 37.7749995,
+        "lng": -122.4387896
+      }
+    },
+    "name": "Alamo Square; San Francisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7568201,
+        "lng": -122.4449138
+      },
+      "southwest": {
+        "lat": 37.7454662,
+        "lng": -122.4615271
+      }
+    },
+    "location": {
+      "lat": 37.7508014,
+      "lng": -122.4538009
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7568201,
+        "lng": -122.4449138
+      },
+      "southwest": {
+        "lat": 37.7454662,
+        "lng": -122.4615271
+      }
+    },
+    "name": "Mid-Town Terrace"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7789688,
+        "lng": -122.4207344
+      },
+      "southwest": {
+        "lat": 37.7704571,
+        "lng": -122.4299304
+      }
+    },
+    "location": {
+      "lat": 37.7759073,
+      "lng": -122.4245247
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7789688,
+        "lng": -122.4207344
+      },
+      "southwest": {
+        "lat": 37.7704571,
+        "lng": -122.4299304
+      }
+    },
+    "name": "Hayes Valley"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7566307,
+        "lng": -122.4241842
+      },
+      "southwest": {
+        "lat": 37.7414804,
+        "lng": -122.4447705
+      }
+    },
+    "location": {
+      "lat": 37.7502378,
+      "lng": -122.4337029
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7566307,
+        "lng": -122.4241842
+      },
+      "southwest": {
+        "lat": 37.7414804,
+        "lng": -122.4447705
+      }
+    },
+    "name": "Noe Valley"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7719876,
+        "lng": -122.4027825
+      },
+      "southwest": {
+        "lat": 37.7478217,
+        "lng": -122.4309111
+      }
+    },
+    "location": {
+      "lat": 37.7598648,
+      "lng": -122.4147977
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7719876,
+        "lng": -122.4027825
+      },
+      "southwest": {
+        "lat": 37.7478217,
+        "lng": -122.4309111
+      }
+    },
+    "name": "Mission"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7573091,
+        "lng": -122.4481393
+      },
+      "southwest": {
+        "lat": 37.7564088,
+        "lng": -122.4520317
+      }
+    },
+    "location": {
+      "lat": 37.7567831,
+      "lng": -122.4499141
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7582079302915,
+        "lng": -122.4481393
+      },
+      "southwest": {
+        "lat": 37.7555099697085,
+        "lng": -122.4520317
+      }
+    },
+    "name": "Palo Alto"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.9298239,
+        "lng": -122.28178
+      },
+      "southwest": {
+        "lat": 37.6398299,
+        "lng": -123.173825
+      }
+    },
+    "location": {
+      "lat": 37.7749295,
+      "lng": -122.4194155
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.812,
+        "lng": -122.3482
+      },
+      "southwest": {
+        "lat": 37.70339999999999,
+        "lng": -122.527
+      }
+    },
+    "name": "SAN FRANCISCO"
+  },
+  {
+    "location": {
+      "lat": 37.7541536,
+      "lng": -122.4471247
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.75550258029149,
+        "lng": -122.4457757197085
+      },
+      "southwest": {
+        "lat": 37.7528046197085,
+        "lng": -122.4484736802915
+      }
+    },
+    "name": "Twin Peaks, San Francisco"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7695956,
+        "lng": -122.4264222
+      },
+      "southwest": {
+        "lat": 37.7627233,
+        "lng": -122.4358091
+      }
+    },
+    "location": {
+      "lat": 37.7676788,
+      "lng": -122.4318604
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7695956,
+        "lng": -122.4264222
+      },
+      "southwest": {
+        "lat": 37.7627233,
+        "lng": -122.4358091
+      }
+    },
+    "name": "Duboce Triangle"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7705001,
+        "lng": -122.4317375
+      },
+      "southwest": {
+        "lat": 37.7692109,
+        "lng": -122.4350739
+      }
+    },
+    "location": {
+      "lat": 37.76955100000001,
+      "lng": -122.433214
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.77120448029149,
+        "lng": -122.4317375
+      },
+      "southwest": {
+        "lat": 37.7685065197085,
+        "lng": -122.4350739
+      }
+    },
+    "name": "Duboce Park"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7719876,
+        "lng": -122.4027825
+      },
+      "southwest": {
+        "lat": 37.7478217,
+        "lng": -122.4309111
+      }
+    },
+    "location": {
+      "lat": 37.7598648,
+      "lng": -122.4147977
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7719876,
+        "lng": -122.4027825
+      },
+      "southwest": {
+        "lat": 37.7478217,
+        "lng": -122.4309111
+      }
+    },
+    "name": "Mission District"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7719875,
+        "lng": -122.4204672
+      },
+      "southwest": {
+        "lat": 37.7580997,
+        "lng": -122.4310613
+      }
+    },
+    "location": {
+      "lat": 37.76424470000001,
+      "lng": -122.4236606
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7719875,
+        "lng": -122.4204672
+      },
+      "southwest": {
+        "lat": 37.7580997,
+        "lng": -122.4310613
+      }
+    },
+    "name": "Mission Dolores"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7695956,
+        "lng": -122.4255558
+      },
+      "southwest": {
+        "lat": 37.7554539,
+        "lng": -122.4467794
+      }
+    },
+    "location": {
+      "lat": 37.7609082,
+      "lng": -122.4350043
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7695956,
+        "lng": -122.4255558
+      },
+      "southwest": {
+        "lat": 37.7554539,
+        "lng": -122.4467794
+      }
+    },
+    "name": "The Castro"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.7695956,
+        "lng": -122.4255558
+      },
+      "southwest": {
+        "lat": 37.7554539,
+        "lng": -122.4467794
+      }
+    },
+    "location": {
+      "lat": 37.7609082,
+      "lng": -122.4350043
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7695956,
+        "lng": -122.4255558
+      },
+      "southwest": {
+        "lat": 37.7554539,
+        "lng": -122.4467794
+      }
+    },
+    "name": "San Francisco Castro"
+  },
+  {
+    "bounds": {
+      "northeast": {
+        "lat": 37.469887,
+        "lng": -122.0446721
+      },
+      "southwest": {
+        "lat": 37.3567832,
+        "lng": -122.1178619
+      }
+    },
+    "location": {
+      "lat": 37.3860517,
+      "lng": -122.0838511
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.469887,
+        "lng": -122.0446721
+      },
+      "southwest": {
+        "lat": 37.3567832,
+        "lng": -122.1178619
+      }
+    },
+    "name": "mountain view"
+  },
+  {
+    "location": {
+      "lat": 37.7561159,
+      "lng": -122.4345763
+    },
+    "viewport": {
+      "northeast": {
+        "lat": 37.7574648802915,
+        "lng": -122.4332273197085
+      },
+      "southwest": {
+        "lat": 37.7547669197085,
+        "lng": -122.4359252802915
+      }
+    },
+    "name": "Castro and 21st"
+  }
+]

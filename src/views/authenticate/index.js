@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import "./authenticate.css";
 import { withRouter, Redirect } from "react-router-dom";
 
+// components
 import SignIn from "../../components/sign-in";
 import SignUp from "../../components/sign-up";
 
+import "./authenticate.css";
+
 const Authenticate = (props) => {
+
   const [login, setLogin] = useState(true);
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
   const { from } = props.location.state || { from: { pathname: "/" } };

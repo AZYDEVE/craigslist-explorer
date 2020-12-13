@@ -1,13 +1,8 @@
 import React from "react";
-import "./post.css";
-import {
-  getImageUrl,
-  imageSize
-} from "../../services/imageService";
-import {
-  convertDate
-} from "../../services/helper";
+import { getImageUrl, imageSize } from "../../services/imageService";
+import { convertDate } from "../../services/helper";
 import { Link } from "react-router-dom";
+import "./post.css";
 
 const Post = (props) => {
   return (
@@ -37,9 +32,6 @@ const Post = (props) => {
           </div>
           <div className='city'>
             {props.post.neighborhood.join(" ")}
-          </div>
-          <div className='pin'>
-            📍
           </div>
         </div>
       </div>
