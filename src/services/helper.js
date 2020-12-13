@@ -1,5 +1,5 @@
 import * as moment from "moment";
 
 export const convertDate = (date) => {
-  return moment(date).format("MMM d");
+  return moment(date).format("MMM D");
 };
