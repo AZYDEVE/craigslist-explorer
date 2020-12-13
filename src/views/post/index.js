@@ -166,9 +166,12 @@ const PostPage = (props) => {
                     onSwiper={(swiper) => swiper.update()}
                   >
                     {
-                      post.images.map((image, index) => {
-                        return <SwiperSlide key={image} style={{ backgroundImage: `url(${getImageUrl(image, imageSize.LARGE)})` }}> </SwiperSlide>
-                      })
+                      post.images && post.images.length && post.images.length > 0 ?
+                        post.images.map((image, index) => {
+                          return <SwiperSlide key={image} style={{ backgroundImage: `url(${getImageUrl(image, imageSize.LARGE)})` }}> </SwiperSlide>
+                        })
+                        :
+                        <SwiperSlide> No images available </SwiperSlide>
                     }
                   </Swiper>
                 </div>

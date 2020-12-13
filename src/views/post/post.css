@@ -27,6 +27,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  color: #9e9e9e;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
 }
 
 .gallery .swiper-button-disabled {
