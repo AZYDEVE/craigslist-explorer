@@ -36,6 +36,8 @@ const stringToNumber = (str) => {
     return returnValue;
 }
 
+const allUniqueNeighborhood = {};
+
 const clean = (obj) => {
     const returnObj = {};
 
@@ -44,8 +46,6 @@ const clean = (obj) => {
         const img = obj.images[index];
         returnObj.images.push(img.replace('_50x50c.jpg', '').replace('https://images.craigslist.org/', ''))
     }
-
-
 
     returnObj.title = obj['result-title'];
 
@@ -87,6 +87,12 @@ const clean = (obj) => {
         }
     }
 
+    if (allUniqueNeighborhood[returnObj.neighborhood.join(" ")]) {
+        allUniqueNeighborhood[returnObj.neighborhood.join(" ")] += 1;
+    } else {
+        allUniqueNeighborhood[returnObj.neighborhood.join(" ")] = 0;
+    }
+
     returnObj.date = Date.parse(obj['result-date']);
 
     // get body from html
@@ -107,13 +113,14 @@ const clean = (obj) => {
 
 
 const cleanData = () => {
-    const original = readJson("data/result.json");
+    const original = readJson("data/apts.json");
     const result = [];
     original.forEach(obj => {
         result.push(clean(obj));
     });
 
     writeJson('data/result.json', result);
+    writeJson('data/neighborhood.json', allUniqueNeighborhood);
 }
 
 cleanData();
