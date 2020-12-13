@@ -37,7 +37,6 @@ const getAllPosts = (req, res) => {
     console.log('getAllPosts: Failed to parse sorting using default values');
     neighborhood = [];
   }
-  console.log(neighborhood)
 
   // Remove empty string from array
   neighborhood = neighborhood.filter((val) => { return val !== ''; })
