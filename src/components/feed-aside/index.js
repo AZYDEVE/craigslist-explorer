@@ -96,6 +96,13 @@ const Aside = (props) => {
   useEffect(calculateZoom, [coordinates]);
   useEffect(getAllLocations, []);
 
+  // Update filter for feeds
+  useEffect(() => {
+    if (props.setFilter) {
+      props.setFilter(location)
+    }
+  }, [location, props]);
+
   // When we go back from the post page to the feed page reset the map
   useEffect(() => {
     if (props.post === null) {

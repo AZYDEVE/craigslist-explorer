@@ -64,7 +64,7 @@ const Map = (props) => {
             }
 
           </GoogleMap>
-          : "loading nothing"
+          : "loading Map"
       }
     </React.Fragment>
   );

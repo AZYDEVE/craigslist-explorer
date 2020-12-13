@@ -1,7 +1,7 @@
 const mongoClient = require("../config/mongoClient");
 const mongo = require("mongodb");
 
-const readPosts = (filter, sorting, startRange, amount) => {
+const readPosts = (filter, sorting, startRange, amount, neighborhood) => {
   return new Promise((resolve, reject) => {
     const query = [];
 
@@ -19,6 +19,10 @@ const readPosts = (filter, sorting, startRange, amount) => {
 
     if (filter && filter.area) {
       query.push({ "$match": { "area": { "$gte": parseInt(filter.area) } } });
+    }
+
+    if (neighborhood && neighborhood.length && neighborhood.length > 0) {
+      query.push({ "$match": { "neighborhood": { "$in": neighborhood } } });
     }
 
     const countPromise = new Promise((resolve, reject) => {

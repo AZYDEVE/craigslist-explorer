@@ -14,7 +14,7 @@ const getAllPosts = (req, res) => {
     filter = {};
   }
 
-  let sorting = req.query.sort
+  let sorting = req.query.sort;
   try {
     sorting = decodeURIComponent(sorting);
     sorting = JSON.parse(sorting);
@@ -26,6 +26,21 @@ const getAllPosts = (req, res) => {
       sortOrder: "asc"
     };
   }
+
+  let neighborhood = req.query.neighborhood;
+  try {
+    neighborhood = decodeURIComponent(neighborhood);
+    const original = neighborhood;
+    neighborhood = neighborhood.split(' ');
+    neighborhood.push(original);
+  } catch (error) {
+    console.log('getAllPosts: Failed to parse sorting using default values');
+    neighborhood = [];
+  }
+  console.log(neighborhood)
+
+  // Remove empty string from array
+  neighborhood = neighborhood.filter((val) => { return val !== ''; })
 
   if (!sorting.amount) {
     sorting.amount = 10;
@@ -43,7 +58,7 @@ const getAllPosts = (req, res) => {
 
   // read entire table
   postController
-    .readPosts(filter, sorting, startRange, parseInt(sorting.amount))
+    .readPosts(filter, sorting, startRange, parseInt(sorting.amount), neighborhood)
     .then((posts) => {
       res.json(posts);
     })

@@ -1,10 +1,10 @@
 import axios from "axios";
 import env from "../config/env";
 
-export const getPosts = (filter, sorting, page) => {
+export const getPosts = (filter, sorting, page, filterNeighborhood) => {
   const uriFilter = encodeURIComponent(JSON.stringify(filter));
   const uriSorting = encodeURIComponent(JSON.stringify(sorting));
-  return axios.get(`${env[process.env.NODE_ENV].api}/posts/all?page=${page}&filter=${uriFilter}&sort=${uriSorting}`);
+  return axios.get(`${env[process.env.NODE_ENV].api}/posts/all?page=${page}&filter=${uriFilter}&sort=${uriSorting}&neighborhood=${filterNeighborhood}`);
 };
 
 export const getPost = (id) => {

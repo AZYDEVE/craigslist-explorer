@@ -20,7 +20,7 @@ const Feed = (props) => {
     // Show spinner
     setDataAvailable(false);
 
-    getPosts(filter, sorting, currentPage)
+    getPosts(filter, sorting, currentPage, props.neighborhood ? props.neighborhood : '')
       .then((response) => {
 
         // get amount of posts
@@ -44,7 +44,7 @@ const Feed = (props) => {
         console.error("Failed to get all threads", err);
       });
 
-  }, [currentPage, filter, sorting]);
+  }, [currentPage, filter, sorting, props.neighborhood]);
 
   const handlePageClick = ({ selected: selectedPage }) => setCurrentPage(selectedPage);
 
