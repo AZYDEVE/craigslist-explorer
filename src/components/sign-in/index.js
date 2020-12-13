@@ -7,8 +7,7 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(undefined);
 
-  // const handlePassword = (pass) => setPassword(sha256(pass).toString());
-  const handlePassword = (pass) => setPassword(pass);
+  const handlePassword = (pass) => setPassword(sha256(pass).toString());
 
   const handleClick = () => {
     if (username === "" || password === "") {

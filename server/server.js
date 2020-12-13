@@ -17,7 +17,7 @@ configurePassport();
 // routes
 const authRoute = require("./routes/auth.route");
 const postsRoute = require("./routes/posts.route");
-// const locationRoute = require("./routes/location.route");
+const annotationRoute = require("./routes/annotation.route");
 
 // Express app
 const app = express();
@@ -41,8 +41,6 @@ app.use(compression());
 // session middelware
 app.use(session({
   genid: (req) => {
-    console.log('Inside the session middleware')
-    console.log(req.sessionID)
     return uuidv4() // use UUIDs for session IDs
   },
   store: new FileStore(),
@@ -57,26 +55,13 @@ app.use(passport.session());
 
 // Default route
 app.get("/", (req, res) => {
-  console.log(req.sessionID)
   res.send("Hello from Craigslist-explorer api");
 });
-
-app.get('/emile', (req, res) => {
-  console.log('Inside GET /authrequired callback')
-  console.log(`User authenticated? ${req.isAuthenticated()}`)
-  if (req.isAuthenticated()) {
-
-    res.send('you hit the authentication endpoint\n')
-  } else {
-    res.redirect('/')
-  }
-})
 
 // user api requests
 app.use("/auth", authRoute);
 app.use("/posts", postsRoute);
-// app.use("/location", locationRoute);
-
+app.use("/annotation", annotationRoute);
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {

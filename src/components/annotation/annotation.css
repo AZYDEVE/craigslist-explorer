@@ -1,0 +1,72 @@
+.annotation-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  min-height: 32px;
+  padding: 10px 0;
+}
+
+.annotation-item div:first-child {
+  line-height: 24px;
+  border-right: 1px #d0d0d0 solid;
+  padding-right: 20px;
+  width: 50px;
+}
+
+.annotation-item div:last-child {
+  line-height: 24px;
+  padding-left: 20px;
+  width: 400px;
+}
+
+.post-container:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.post-container .image {
+  width: 100px;
+  height: 75px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.post-container .content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  justify-content: center;
+  width: calc(100% - 200px);
+}
+
+.post-container .content .extra-info {
+  display: flex;
+  flex-direction: row;
+  color: #9e9e9e;
+  font-size: 15px;
+  line-height: 15px;
+}
+.post-container .content .extra-info .date {
+  width: 75px;
+}
+
+.post-container .content .extra-info .bedrooms,
+.post-container .content .extra-info .area {
+  margin-right: 5px;
+}
+
+.post-container .content .title {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.post-container .price {
+  width: 100px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+}

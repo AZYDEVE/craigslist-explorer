@@ -22,10 +22,8 @@ const Feed = (props) => {
 
   const requestPosts = () => {
     setDataAvailable(false);
-    console.log('request posts');
     getPosts(filter, sorting, currentPage)
       .then((response) => {
-        console.log('response posts', response);
 
         // get amount of posts
         if (response.data.total) {
@@ -51,17 +49,14 @@ const Feed = (props) => {
   }
 
   const updateFilter = (filter) => {
-    console.log('updateFilter in feed', filter);
     setFilter(filter);
   }
 
   const updateSorting = (sorting) => {
-    console.log('updateSorting in feed', sorting);
     setSorting(sorting);
   }
 
   function handlePageClick({ selected: selectedPage }) {
-    console.log('page update', selectedPage);
     setCurrentPage(selectedPage);
   }
 

@@ -8,14 +8,23 @@ export const getPosts = (filter, sorting, page) => {
   return axios.get(`${env[process.env.NODE_ENV].api}/posts/all?page=${page}&filter=${uriFilter}&sort=${uriSorting}`);
 };
 
-export const searchAllThreads = (searchTerm) => {
-  return axios.get(
-    env[process.env.NODE_ENV].api + "/thread/search?searchTerm=" + searchTerm
-  );
-};
-
 export const getPost = (id) => {
   return axios.get(env[process.env.NODE_ENV].api + "/posts/one?id=" + id);
+};
+
+export const addAnnotation = (payload) => {
+  return axios.post(env[process.env.NODE_ENV].api + "/annotation/add",
+    payload, {
+    withCredentials: true,
+    timeout: 10000
+  });
+};
+
+export const getAnnotations = (id) => {
+  return axios.get(env[process.env.NODE_ENV].api + "/annotation/all?id=" + id, {
+    withCredentials: true,
+    timeout: 10000
+  });
 };
 
 // export const addThread = (payload) => {

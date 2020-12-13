@@ -1,0 +1,38 @@
+.new-annotation {
+  width: calc(100%);
+  position: relative;
+  background-color: white;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-annotation a {
+  text-decoration: none;
+}
+
+.new-annotation.login {
+  height: 100px;
+}
+
+.new-annotation textarea {
+  height: 100px;
+  font-family: "Open Sans", sans-serif;
+  padding: 13px;
+  border: 1px #d0d0d0 solid;
+}
+
+.new-annotation button {
+  width: 100px;
+  background-color: transparent;
+  color: #005edc;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  margin-top: 10px;
+  border-radius: 5px;
+}

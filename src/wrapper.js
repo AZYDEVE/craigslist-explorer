@@ -21,7 +21,6 @@ function App() {
   const getUser = () => {
     login()
       .then((response) => {
-        console.log('initial get user', response.data);
         if (response.data) {
           setUser(response.data);
         }
@@ -57,7 +56,7 @@ function App() {
           </Route>
           <Route path="/post/:postId" >
             <FeedAside />
-            <Post />
+            <Post user={user} />
           </Route>
           <Route path="/login" >
             <Authenticate loginSuccess={loginSuccess} />
