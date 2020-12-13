@@ -47,7 +47,10 @@ app.use(session({
   store: new FileStore(),
   secret: "Hi I'm Emile",
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: {
+    sameSite: 'none'
+  }
 }))
 
 // Enable passport

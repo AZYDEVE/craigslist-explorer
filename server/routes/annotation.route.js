@@ -37,7 +37,7 @@ const addAnnotation = async (req, res) => {
         });
 
     } else {
-      console.err('Failed to authenticate');
+      console.error('Failed to authenticate');
       return res.status(400).send("Failed to authenticate");
     }
   } else {
