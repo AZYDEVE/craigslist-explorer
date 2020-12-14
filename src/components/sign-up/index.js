@@ -21,10 +21,10 @@ const Register = (props) => {
 
     signUpUser(payload)
       .then((response) => {
-        if (response.message) {
-          setError(response.message);
-        } else {
-          props.success(response);
+        if (response.status === 200) {
+          props.success(response.data);
+        } else if (response.status === 202) {
+          setError(response.data.message);
         }
       })
       .catch((error) => {
