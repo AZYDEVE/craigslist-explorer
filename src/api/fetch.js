@@ -6,6 +6,7 @@ export async function postData(url = '', data = {}) {
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
     credentials: 'include', // include, *same-origin, omit
+    withCredentials: true,
     headers: {
       'Content-Type': 'application/json'
       // 'Content-Type': 'application/x-www-form-urlencoded',
