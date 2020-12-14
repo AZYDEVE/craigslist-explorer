@@ -1,7 +1,10 @@
 {
   "name": "craigslist-explorer",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://emile-f.github.io/craigslist-explorer/",
+  "author": "emile-f",
+  "license": "MIT",
   "dependencies": {
     "@react-google-maps/api": "^1.13.0",
     "axios": "^0.21.0",
