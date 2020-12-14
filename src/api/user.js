@@ -1,6 +1,6 @@
 import env from "../config/env";
 import axios from 'axios';
-import { postData } from './/fetch'
+// import { postData } from './/fetch'
 // Api call to get all users from the database
 // mostly used for debugging and admin purposes
 // Get env api -> production: deployed database
@@ -9,16 +9,16 @@ import { postData } from './/fetch'
 // Needs withCredentials and timeout as properties in the header for passport to work
 
 export const signInUser = (payload) => {
-  return postData(
+  return axios.post(
     env[process.env.NODE_ENV].api + "/auth/signin",
-    payload
+    payload, { withCredentials: true, timeout: 10000 }
   );
 };
 
 export const signUpUser = (payload) => {
-  return postData(
+  return axios.post(
     env[process.env.NODE_ENV].api + "/auth/signup",
-    payload
+    payload, { withCredentials: true, timeout: 10000 }
   );
 };
 
@@ -28,5 +28,5 @@ export const login = () => {
 };
 
 export const logout = () => {
-  return postData(env[process.env.NODE_ENV].api + "/auth/signout");
+  return axios.post(env[process.env.NODE_ENV].api + "/auth/signout", { withCredentials: true, timeout: 10000 });
 };

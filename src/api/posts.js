@@ -15,8 +15,7 @@ export const addAnnotation = (payload) => {
   return axios.post(env[process.env.NODE_ENV].api + "/annotation/add",
     payload, {
     withCredentials: true,
-    timeout: 10000,
-    
+    timeout: 10000
   });
 };
 
