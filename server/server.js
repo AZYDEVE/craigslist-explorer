@@ -25,7 +25,7 @@ const locationRoute = require("./routes/location.route");
 const app = express();
 
 // enable cors
-var whitelist = ['http://localhost:8080', 'https://emile-f.github.io/']
+var whitelist = ['http://localhost:8080', 'https://emile-f.github.io']
 app.use(cors({
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
