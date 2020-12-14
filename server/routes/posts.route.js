@@ -75,7 +75,7 @@ const getOnePost = async (req, res) => {
   const id = req.query.id;
 
   if (!id || id.length !== 24) {
-    return res.status(400).send("id is not valid"); // Invalid ID length
+    return res.status(400).json({ message: "id is not valid" }); // Invalid ID length
   }
 
   // read entire table

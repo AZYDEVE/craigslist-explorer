@@ -33,12 +33,12 @@ const addAnnotation = async (req, res) => {
 
         }).catch((err) => {
           res.status(202);
-          res.send(err);
+          res.json(err);
         });
 
     } else {
       console.error('Failed to authenticate');
-      return res.status(400).send("Failed to authenticate");
+      return res.status(400).json({ message: "Failed to authenticate" });
     }
   } else {
     // No form data found
@@ -56,7 +56,7 @@ const getAnnotations = async (req, res) => {
     const id = req.query.id;
 
     if (!id || id.length !== 24) {
-      return res.status(400).send("id is not valid"); // Invalid ID length
+      return res.status(400).json({ message: "id is not valid" }); // Invalid ID length
     }
 
     // read annotation table 
@@ -75,7 +75,7 @@ const getAnnotations = async (req, res) => {
       });
 
   } else {
-    return res.status(400).send("Failed to authenticate");
+    return res.status(400).json({ message: "Failed to authenticate" });
   }
 };
 

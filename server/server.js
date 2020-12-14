@@ -9,6 +9,7 @@ const FileStore = require('session-file-store')(session);
 const passport = require('passport');
 const cookieParser = require("cookie-parser");
 var bodyParser = require('body-parser')
+const config = require("./config/config");
 
 // Passport config
 const configurePassport = require('./config/authConfig');
@@ -40,19 +41,24 @@ app.use(mongoSanitize());
 app.use(compression());
 
 // session middelware
-app.use(session({
+const sessionConfig = {
   genid: (req) => {
     return uuidv4() // use UUIDs for session IDs
   },
   store: new FileStore(),
   secret: "Hi I'm Emile",
   resave: false,
-  saveUninitialized: false,
-  cookie: {
+  saveUninitialized: false
+}
+
+if (config.env === 'deploy') {
+  sessionConfig.cookie = {
     sameSite: 'none',
     secure: true
   }
-}))
+}
+
+app.use(session(sessionConfig))
 
 // Enable passport
 app.use(passport.initialize());
