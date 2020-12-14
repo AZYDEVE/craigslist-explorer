@@ -12,7 +12,7 @@ const signInPost = (req, res, next) => {
       return res.status(400).json({ message: "One of the required fields is not set" });
     }
 
-    passport.authenticate('local', { session: false }, (err, user) => {
+    passport.authenticate('local', (err, user) => {
 
       if (err) {
         return next(err);
@@ -67,7 +67,7 @@ const signUp = (req, res, next) => {
         userController
           .addUser({ email: req.body.email, password: req.body.password })
           .then((users) => {
-            passport.authenticate('local', { session: false }, (err, user) => {
+            passport.authenticate('local', (err, user) => {
 
               if (err) {
                 return next(err);
