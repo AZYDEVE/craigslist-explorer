@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import { login, logout } from './api/user'
 import { LoadScript } from '@react-google-maps/api';
-
+import { deleteCookie } from './services/cookie.service'
 import './index.css';
 
 // views
@@ -40,6 +40,8 @@ const App = () => {
     logout().then((response) => {
       if (response.data && response.data === true) {
         setUser(null);
+        // remove cookie
+        deleteCookie('connect.sid')
       }
     }).catch((err) => {
       console.log('Request to logout failed', err);

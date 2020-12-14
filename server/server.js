@@ -62,24 +62,11 @@ const sessionConfig = {
   saveUninitialized: false
 }
 
-// if (config.env === 'deploy') {
-//   sessionConfig.cookie = {
-//     sameSite: 'none',
-//     secure: true,
-//     httpOnly: false
-//   }
-// }
-
 app.use(session(sessionConfig))
 
 // Enable passport
 app.use(passport.initialize());
 app.use(passport.session());
-
-// Default route
-// app.get("/", (req, res) => {
-//   res.send("Hello from Craigslist-explorer api");
-// });
 
 // user api requests
 app.use("/auth", authRoute);

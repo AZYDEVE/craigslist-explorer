@@ -37,7 +37,7 @@
   "scripts": {
     "start": "node server/app.js",
     "start:frontend": "PORT=8080 react-scripts start",
-    "build:frontend": "react-scripts build",
+    "build": "react-scripts build && mv build server/build",
     "start:backend": "nodemon server/app.js",
     "clean-data": "node data/clean.js",
     "lint": "eslint src/**/*.js server/**/*.js --fix",
