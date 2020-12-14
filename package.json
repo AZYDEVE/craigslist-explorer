@@ -2,7 +2,7 @@
   "name": "craigslist-explorer",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://emile-f.github.io/craigslist-explorer/",
+  "homepage": "https://webdev-craigslist-exporer-back.herokuapp.com/",
   "author": "emile-f",
   "license": "MIT",
   "dependencies": {

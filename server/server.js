@@ -24,14 +24,16 @@ const locationRoute = require("./routes/location.route");
 // Express app
 const app = express();
 
+
+
 // enable cors
-var whitelist = ['http://localhost:8080', 'https://emile-f.github.io']
+var whitelist = ['http://localhost:8080', 'https://emile-f.github.io', 'localhost:3001']
 app.use(cors({
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
     } else {
-      callback(new Error('Not allowed by CORS'))
+      callback()
     }
   }, credentials: true
 }));
@@ -75,9 +77,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Default route
-app.get("/", (req, res) => {
-  res.send("Hello from Craigslist-explorer api");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello from Craigslist-explorer api");
+// });
 
 // user api requests
 app.use("/auth", authRoute);
@@ -85,11 +87,14 @@ app.use("/posts", postsRoute);
 app.use("/annotation", annotationRoute);
 app.use("/location", locationRoute);
 
+// Static files
+app.use(express.static(__dirname + "/build"));
+
 // send back a 404 error for any unknown api request
-app.use((req, res, next) => {
-  res.status(httpStatus.NOT_FOUND);
-  res.send("Not found");
-});
+// app.use((req, res, next) => {
+//   res.status(httpStatus.NOT_FOUND);
+//   res.send("Not found");
+// });
 
 
 // Export Express router
