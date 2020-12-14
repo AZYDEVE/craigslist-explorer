@@ -21,11 +21,11 @@ const Login = (props) => {
 
     signInUser(payload)
       .then((response) => {
-        console.log(response);
-        if (response.status === 200) {
-          props.success(response.data);
-        } else if (response.status === 202) {
-          setError(response.data);
+        console.log(response)
+        if (response.message) {
+          setError(response.message);
+        } else {
+          props.success(response);
         }
       })
       .catch((error) => {

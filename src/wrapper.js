@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import { login, logout } from './api/user'
+import { LoadScript } from '@react-google-maps/api';
+
 import './index.css';
 
 // views
@@ -17,6 +19,7 @@ import FeedAside from "./components/feed-aside";
 const App = () => {
   const [user, setUser] = useState(null);
   const [post, setPost] = useState(null);
+  const [filterNeighborhood, setFilterNeighborhood] = useState(null);
 
   const getUser = () => {
     login()
@@ -46,26 +49,30 @@ const App = () => {
   useEffect(getUser, []);
 
   return (
-    <Router>
-      <Header logout={logoutUser} user={user} />
-      <div role="main" id="craigslist-body" className="craigslist-body">
-        <Switch>
-          <Route exact path="/">
-            <FeedAside post={post} />
-            <Feed postLoaded={setPost} />
-          </Route>
-          <Route path="/post/:postId" >
-            <FeedAside post={post} />
-            <Post postLoaded={setPost} user={user} />
-          </Route>
-          <Route path="/login" >
-            <Authenticate loginSuccess={loginSuccess} />
-          </Route>
-          <Route path="*" component={NotFound} />
-        </Switch>
-      </div>
-      <Footer />
-    </Router>
+    <LoadScript
+      googleMapsApiKey="AIzaSyCUt2G6KFrKTpKlUkbUrTIH0SqpgzRX8_0"
+    >
+      <Router>
+        <Header logout={logoutUser} user={user} />
+        <div role="main" id="craigslist-body" className="craigslist-body">
+          <Switch>
+            <Route exact path="/">
+              <FeedAside setFilter={setFilterNeighborhood} post={post} />
+              <Feed neighborhood={filterNeighborhood} postLoaded={setPost} />
+            </Route>
+            <Route path="/post/:postId" >
+              <FeedAside setFilter={setFilterNeighborhood} post={post} />
+              <Post postLoaded={setPost} user={user} />
+            </Route>
+            <Route path="/login" >
+              <Authenticate loginSuccess={loginSuccess} />
+            </Route>
+            <Route path="*" component={NotFound} />
+          </Switch>
+        </div>
+        <Footer />
+      </Router>
+    </LoadScript>
   );
 }
 

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 import env from "../config/env";
 
 export const getPosts = (filter, sorting, page, filterNeighborhood) => {
@@ -15,7 +15,8 @@ export const addAnnotation = (payload) => {
   return axios.post(env[process.env.NODE_ENV].api + "/annotation/add",
     payload, {
     withCredentials: true,
-    timeout: 10000
+    timeout: 10000,
+    
   });
 };
 
