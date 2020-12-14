@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/craigslist-explorer/static/css/main.9938ebac.chunk.css",
-    "main.js": "/craigslist-explorer/static/js/main.bcf15933.chunk.js",
-    "main.js.map": "/craigslist-explorer/static/js/main.bcf15933.chunk.js.map",
+    "main.js": "/craigslist-explorer/static/js/main.bb3ab7dd.chunk.js",
+    "main.js.map": "/craigslist-explorer/static/js/main.bb3ab7dd.chunk.js.map",
     "runtime-main.js": "/craigslist-explorer/static/js/runtime-main.9603e742.js",
     "runtime-main.js.map": "/craigslist-explorer/static/js/runtime-main.9603e742.js.map",
     "static/css/2.e68c7c39.chunk.css": "/craigslist-explorer/static/css/2.e68c7c39.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.e68c7c39.chunk.css",
     "static/js/2.84723e62.chunk.js",
     "static/css/main.9938ebac.chunk.css",
-    "static/js/main.bcf15933.chunk.js"
+    "static/js/main.bb3ab7dd.chunk.js"
   ]
 }
