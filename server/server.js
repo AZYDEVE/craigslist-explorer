@@ -60,12 +60,13 @@ const sessionConfig = {
   saveUninitialized: false
 }
 
-// if (config.env === 'deploy') {
-//   sessionConfig.cookie = {
-//     sameSite: 'none',
-//     secure: true
-//   }
-// }
+if (config.env === 'deploy') {
+  sessionConfig.cookie = {
+    sameSite: 'none',
+    secure: true,
+    httpOnly: false
+  }
+}
 
 app.use(session(sessionConfig))
 
