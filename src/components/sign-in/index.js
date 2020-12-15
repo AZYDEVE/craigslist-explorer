@@ -48,6 +48,8 @@ const Login = (props) => {
           name="username"
           placeholder="Enter your Email"
           type="text"
+          minLength='3'
+          required
           onChange={(event) => setUsername(event.target.value)}
         ></input>
       </div>
@@ -60,6 +62,8 @@ const Login = (props) => {
           name="password"
           placeholder="Enter your Password"
           type="password"
+          minLength='3'
+          required
           onChange={(event) => handlePassword(event.target.value)}
         ></input>
       </div>

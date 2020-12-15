@@ -1,8 +1,8 @@
 const environment = {};
 
 environment["development"] = {
-  // api: "http://localhost:3001",
-  api: "https://webdev-craigslist-exporer-back.herokuapp.com",
+  api: "http://localhost:3001",
+  // api: "https://webdev-craigslist-exporer-back.herokuapp.com",
 };
 
 environment["production"] = {

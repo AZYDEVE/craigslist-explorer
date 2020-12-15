@@ -49,6 +49,8 @@ const Register = (props) => {
           name="username"
           placeholder="Enter your Email"
           type="text"
+          minLength='3'
+          required
           onChange={(event) => setEmail(event.target.value)}
         ></input>
       </div>
@@ -61,6 +63,8 @@ const Register = (props) => {
           name="password"
           placeholder="Enter your Password"
           type="password"
+          minLength='4'
+          required
           onChange={(event) => handlePassword(event.target.value)}
         ></input>
       </div>
