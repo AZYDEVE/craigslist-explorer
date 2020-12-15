@@ -23,16 +23,23 @@ if (env === "localhost") {
     process.argv.indexOf("-port") === -1
       ? process.env["PORT"] || "3000"
       : process.argv[process.argv.indexOf("-port") + 1];
+
   let uri =
     process.argv.indexOf("-uri") === -1
       ? process.env["URI"] || ""
       : process.argv[process.argv.indexOf("-uri") + 1];
+
+  let google =
+    process.argv.indexOf("-google") === -1
+      ? process.env["GOOGLE"] || ""
+      : process.argv[process.argv.indexOf("-google") + 1];
 
   configJson[env] = {
     port,
     mongo: {
       uri,
     },
+    google
   };
 }
 
