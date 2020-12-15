@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const locationController = require('../controller/location.controller');
-const axios = require('axios');
+const locationController = require("../controller/location.controller");
+const axios = require("axios");
 const config = require("../config/config");
 
 const getAllLocations = (req, res) => {
@@ -35,12 +35,12 @@ const getGeoLocations = (req, res) => {
     })
     .catch((err) => {
       res.json({
-        message: 'Failed to get geo-location from google api'
-      })
-    })
+        message: "Failed to get geo-location from google api"
+      });
+    });
 };
 
-router.get('/geo', getGeoLocations)
+router.get("/geo", getGeoLocations);
 
 router.get("/all", getAllLocations);
 

@@ -1,6 +1,5 @@
 import env from "../config/env";
-import axios from 'axios';
-// import { postData } from './/fetch'
+import axios from "axios";
 // Api call to get all users from the database
 // mostly used for debugging and admin purposes
 // Get env api -> production: deployed database
@@ -24,7 +23,7 @@ export const signUpUser = (payload) => {
 
 
 export const login = () => {
-  return axios(env[process.env.NODE_ENV].api + "/auth/signin", { method: 'get', withCredentials: true, timeout: 10000 });
+  return axios(env[process.env.NODE_ENV].api + "/auth/signin", { method: "get", withCredentials: true, timeout: 10000 });
 };
 
 export const logout = () => {

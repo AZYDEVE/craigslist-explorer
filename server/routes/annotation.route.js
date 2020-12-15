@@ -15,12 +15,12 @@ const addAnnotation = async (req, res) => {
             message: req.body.message,
             userId: req.user._id.toString(),
             created: Date.now()
-          }
+          };
 
           annotationController
             .addAnnotation(annotation)
             .then((result) => {
-              res.json(result)
+              res.json(result);
             })
             .catch((err) => {
               // Failed to add annotation
@@ -37,7 +37,7 @@ const addAnnotation = async (req, res) => {
         });
 
     } else {
-      console.error('Failed to authenticate');
+      console.error("Failed to authenticate");
       return res.status(400).json({ message: "Failed to authenticate" });
     }
   } else {

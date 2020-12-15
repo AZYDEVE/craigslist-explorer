@@ -5,12 +5,12 @@ const router = express.Router();
 const getAllPosts = (req, res) => {
 
   const page = req.query.page;
-  let filter = req.query.filter
+  let filter = req.query.filter;
   try {
     filter = decodeURIComponent(filter);
     filter = JSON.parse(filter);
   } catch (error) {
-    console.log('getAllPosts: Failed to parse filter using default values');
+    console.log("getAllPosts: Failed to parse filter using default values");
     filter = {};
   }
 
@@ -19,7 +19,7 @@ const getAllPosts = (req, res) => {
     sorting = decodeURIComponent(sorting);
     sorting = JSON.parse(sorting);
   } catch (error) {
-    console.log('getAllPosts: Failed to parse sorting using default values');
+    console.log("getAllPosts: Failed to parse sorting using default values");
     sorting = {
       amount: "10",
       sortBy: "date",
@@ -31,15 +31,15 @@ const getAllPosts = (req, res) => {
   try {
     neighborhood = decodeURIComponent(neighborhood);
     const original = neighborhood;
-    neighborhood = neighborhood.split(' ');
+    neighborhood = neighborhood.split(" ");
     neighborhood.push(original);
   } catch (error) {
-    console.log('getAllPosts: Failed to parse sorting using default values');
+    console.log("getAllPosts: Failed to parse sorting using default values");
     neighborhood = [];
   }
 
   // Remove empty string from array
-  neighborhood = neighborhood.filter((val) => { return val !== ''; })
+  neighborhood = neighborhood.filter((val) => { return val !== ""; });
 
   if (!sorting.amount) {
     sorting.amount = 10;

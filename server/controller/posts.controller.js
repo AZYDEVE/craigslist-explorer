@@ -27,7 +27,7 @@ const readPosts = (filter, sorting, startRange, amount, neighborhood) => {
 
     const countPromise = new Promise((resolve, reject) => {
       const countQuery = [...query];
-      countQuery.push({ $count: "total" })
+      countQuery.push({ $count: "total" });
       mongoClient
         .getDatabase()
         .connection.collection("data")
@@ -40,7 +40,7 @@ const readPosts = (filter, sorting, startRange, amount, neighborhood) => {
             if (docs && docs.length && docs.length > 0) {
               resolve(docs[0]);
             } else {
-              resolve({ total: 0 })
+              resolve({ total: 0 });
             }
           }
         });
@@ -49,7 +49,7 @@ const readPosts = (filter, sorting, startRange, amount, neighborhood) => {
     const dataPromise = new Promise((resolve, reject) => {
       const dataQuery = [...query];
       dataQuery.push(...[
-        { $sort: { [sorting['sortBy']]: sorting.sortOrder && sorting.sortOrder === 'desc' ? -1 : 1 } },
+        { $sort: { [sorting["sortBy"]]: sorting.sortOrder && sorting.sortOrder === "desc" ? -1 : 1 } },
         { $skip: startRange },
         { $limit: amount }
       ]);
@@ -75,7 +75,7 @@ const readPosts = (filter, sorting, startRange, amount, neighborhood) => {
         resolve(result);
       }).catch((err) => {
         reject(err);
-      })
+      });
   });
 };
 

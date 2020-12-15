@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const passport = require('passport');
-const helper = require('./helper');
-const userController = require('./../controller/user.controller');
+const passport = require("passport");
+const helper = require("./helper");
+const userController = require("./../controller/user.controller");
 
 const signInPost = (req, res, next) => {
   if (req && req.body) {
@@ -12,7 +12,7 @@ const signInPost = (req, res, next) => {
       return res.status(400).json({ message: "One of the required fields is not set" });
     }
 
-    passport.authenticate('local', (err, user) => {
+    passport.authenticate("local", (err, user) => {
 
       if (err) {
         return next(err);
@@ -27,7 +27,7 @@ const signInPost = (req, res, next) => {
           return next(err);
         }
         return res.json(req.user);
-      })
+      });
     })(req, res, next);
   } else {
     // No form data found
@@ -67,7 +67,7 @@ const signUp = (req, res, next) => {
         userController
           .addUser({ email: req.body.email, password: req.body.password })
           .then((users) => {
-            passport.authenticate('local', (err, user) => {
+            passport.authenticate("local", (err, user) => {
 
               if (err) {
                 return next(err);
@@ -82,7 +82,7 @@ const signUp = (req, res, next) => {
                   return next(err);
                 }
                 return res.json(req.user);
-              })
+              });
             })(req, res, next);
           })
           .catch((err) => {
