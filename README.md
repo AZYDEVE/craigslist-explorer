@@ -31,6 +31,7 @@ Application is deployed on heroku: https://webdev-craigslist-exporer-back.heroku
     - ENV (default value= localhost)
     - PORT (default value= 3000)  
     - URI (no default value)
+    - GOOGLE (google geocode api key, no default value)
 4. to start the backend server run `npm run start:backend`
 4. to start the frontend react application run `npm run start:frontend`
 
