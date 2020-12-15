@@ -161,24 +161,24 @@ const PostPage = (props) => {
                     {post.images &&
                     post.images.length &&
                     post.images.length > 0 ? (
-                      post.images.map((image, index) => {
-                        return (
-                          <SwiperSlide
-                            key={image}
-                            style={{
-                              backgroundImage: `url(${getImageUrl(
-                                image,
-                                imageSize.LARGE
-                              )})`,
-                            }}
-                          >
-                            {" "}
-                          </SwiperSlide>
-                        );
-                      })
-                    ) : (
-                      <SwiperSlide> No images available </SwiperSlide>
-                    )}
+                        post.images.map((image, index) => {
+                          return (
+                            <SwiperSlide
+                              key={image}
+                              style={{
+                                backgroundImage: `url(${getImageUrl(
+                                  image,
+                                  imageSize.LARGE
+                                )})`,
+                              }}
+                            >
+                              {" "}
+                            </SwiperSlide>
+                          );
+                        })
+                      ) : (
+                        <SwiperSlide> No images available </SwiperSlide>
+                      )}
                   </Swiper>
                 </div>
                 <div className="body">{ReactHtmlParser(getBody())}</div>
@@ -225,10 +225,10 @@ const PostPage = (props) => {
                       {annotations &&
                       annotations.length &&
                       annotations.length > 0 ? (
-                        <AnnotationList annotations={annotations} />
-                      ) : (
-                        <div> No annotations found for this post </div>
-                      )}
+                          <AnnotationList annotations={annotations} />
+                        ) : (
+                          <div> No annotations found for this post </div>
+                        )}
                     </div>
                     <AddAnnotation
                       success={AddedAnnotation}

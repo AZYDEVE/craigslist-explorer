@@ -145,12 +145,12 @@ const Aside = (props) => {
             <option value="">All</option>
             {locations && locations.length > 0
               ? locations.map((loc, index) => {
-                  return (
-                    <option key={index} value={loc.name}>
-                      {loc.name}
-                    </option>
-                  );
-                })
+                return (
+                  <option key={index} value={loc.name}>
+                    {loc.name}
+                  </option>
+                );
+              })
               : ""}
           </select>
         </div>
