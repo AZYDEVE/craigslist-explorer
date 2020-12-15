@@ -46,17 +46,19 @@ Application is deployed on heroku: https://webdev-craigslist-exporer-back.heroku
 ## Screenshots
 
 ### Home page
-![Image of Adobe color](./screenshots/home.png)
+![Image of home page](./screenshots/home.png)
 
 ### Post page
-![Image of Adobe color](./screenshots/post.png)
+![Image of post page](./screenshots/post.png)
 
 ### Sign-in/sign-up page
-![Image of Adobe color](./screenshots/signin.png)
+![Image of Sign-in/sign-up page](./screenshots/signin.png)
 
 ### Annotation
-![Image of Adobe color](./screenshots/annotation.png)
+![Image of Annotation page](./screenshots/annotation.png)
 
+### Home page (small)
+![Image of home page (small)](./screenshots/home_small.png)
 ## License
 
 > You can check out the full license [here](/LICENSE)
