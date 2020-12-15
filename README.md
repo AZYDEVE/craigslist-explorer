@@ -10,7 +10,12 @@ You will be building an application that let's me explore a list of Craigslist p
 You must implement full authentication with passport or similar, and add a creative element of your choice. You must get that creative component approved by me on #project, there cannot be repeated creative components. If you need ideas DM me.
 Deadline is the day of the final exam.
 
+Class link: https://johnguerra.co/classes/webDevelopment_fall_2020/
 Original dataset: [here](/data/apts.json)
+
+## Author
+
+Emile Ferrand
 
 ## Deployed application
 
@@ -40,7 +45,17 @@ Application is deployed on heroku: https://webdev-craigslist-exporer-back.heroku
 
 ## Screenshots
 
+### Home page
+![Image of Adobe color](./screenshots/home.png)
 
+### Post page
+![Image of Adobe color](./screenshots/post.png)
+
+### Sign-in/sign-up page
+![Image of Adobe color](./screenshots/signin.png)
+
+### Annotation
+![Image of Adobe color](./screenshots/annotation.png)
 
 ## License
 
