@@ -22,20 +22,22 @@ const getAllLocations = (req, res) => {
 };
 
 const getGeoLocations = (req, res) => {
-
   const location = req.query.location;
 
   if (!location) {
     return res.status(400).json({ message: "location is not valid" }); // Invalid location
   }
 
-  axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}+SF,CA&key=${config.google}`)
+  axios
+    .get(
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${location}+SF,CA&key=${config.google}`
+    )
     .then((response) => {
       res.json(response.data);
     })
     .catch((err) => {
       res.json({
-        message: "Failed to get geo-location from google api"
+        message: "Failed to get geo-location from google api",
       });
     });
 };

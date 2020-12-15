@@ -26,15 +26,15 @@ const Header = (props) => {
             </button>
           </div>
         ) : (
-            <Link
-              to={{
-                pathname: "/login",
-                state: { from: props.location },
-              }}
-            >
-              Sign-In/Sign-up
-            </Link>
-          )}
+          <Link
+            to={{
+              pathname: "/login",
+              state: { from: props.location },
+            }}
+          >
+            Sign-In/Sign-up
+          </Link>
+        )}
       </div>
     </header>
   );

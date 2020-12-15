@@ -8,7 +8,6 @@ import SignUp from "../../components/sign-up";
 import "./authenticate.css";
 
 const Authenticate = (props) => {
-
   const [login, setLogin] = useState(true);
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
   const { from } = props.location.state || { from: { pathname: "/" } };
@@ -31,8 +30,8 @@ const Authenticate = (props) => {
       {login ? (
         <SignIn changeMode={changeLoginMode} success={loginSuccess} />
       ) : (
-          <SignUp changeMode={changeLoginMode} success={loginSuccess} />
-        )}
+        <SignUp changeMode={changeLoginMode} success={loginSuccess} />
+      )}
     </div>
   );
 };

@@ -41,7 +41,7 @@
 .filter .minimize span,
 .filter .area span,
 .filter .price span {
-  color:  black;
+  color: black;
   margin-left: 5px;
   user-select: none;
 }

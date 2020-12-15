@@ -37,5 +37,5 @@ const doesPostExist = (id) => {
 
 module.exports = {
   doesUserExist,
-  doesPostExist
+  doesPostExist,
 };

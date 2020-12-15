@@ -8,7 +8,6 @@ import Sort from "../../components/sort";
 import ReactPaginate from "react-paginate";
 
 const Feed = (props) => {
-
   const [posts, setPosts] = useState([]);
   const [amountOfPosts, setAmountOfPosts] = useState(0);
   const [dataAvailable, setDataAvailable] = useState(false);
@@ -20,9 +19,13 @@ const Feed = (props) => {
     // Show spinner
     setDataAvailable(false);
 
-    getPosts(filter, sorting, currentPage, props.neighborhood ? props.neighborhood : '')
+    getPosts(
+      filter,
+      sorting,
+      currentPage,
+      props.neighborhood ? props.neighborhood : ""
+    )
       .then((response) => {
-
         // get amount of posts
         if (response.data.total) {
           setAmountOfPosts(response.data.total);
@@ -43,44 +46,45 @@ const Feed = (props) => {
       .catch((err) => {
         console.error("Failed to get all threads", err);
       });
-
   }, [currentPage, filter, sorting, props.neighborhood]);
 
-  const handlePageClick = ({ selected: selectedPage }) => setCurrentPage(selectedPage);
+  const handlePageClick = ({ selected: selectedPage }) =>
+    setCurrentPage(selectedPage);
 
   const initialLoad = () => {
     requestPosts();
-    if (props.postLoaded) (
-      props.postLoaded(null)
-    )
-  }
+    if (props.postLoaded) props.postLoaded(null);
+  };
 
-  useEffect(() => { setCurrentPage(0); }, [filter, sorting])
-  useEffect(requestPosts, [filter, sorting, currentPage, requestPosts])
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [filter, sorting]);
+  useEffect(requestPosts, [filter, sorting, currentPage, requestPosts]);
   useEffect(initialLoad, [props, requestPosts]);
 
   return (
     <div className="feed">
       <Filter updateFilter={setFilter} />
-      <div className='feed-smaller'>
+      <div className="feed-smaller">
         <Sort updateSorting={setSorting} />
-        {
-          dataAvailable ?
-            <PostList posts={posts} />
-            :
-            <Loader
-              type="Puff"
-              color="#005edc"
-              height={100}
-              width={100}
-              className="loader"
-            />
-        }
+        {dataAvailable ? (
+          <PostList posts={posts} />
+        ) : (
+          <Loader
+            type="Puff"
+            color="#005edc"
+            height={100}
+            width={100}
+            className="loader"
+          />
+        )}
       </div>
       <ReactPaginate
         previousLabel={"← Previous"}
         nextLabel={"Next →"}
-        pageCount={Math.ceil(amountOfPosts / (sorting && sorting.amount ? sorting.amount : 10))}
+        pageCount={Math.ceil(
+          amountOfPosts / (sorting && sorting.amount ? sorting.amount : 10)
+        )}
         onPageChange={handlePageClick}
         containerClassName={"pagination"}
         previousLinkClassName={"pagination__link"}

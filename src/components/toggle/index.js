@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./toggle.css";
 
 const Toggle = (props) => {
-
   const [toggleClass, setToggleClass] = useState("off");
 
   // Get initial state of parent element
@@ -13,22 +12,37 @@ const Toggle = (props) => {
     } else {
       toggleSwitch(false);
     }
-  }
+  };
 
-  useEffect(setToggleState, [props.enabled])
+  useEffect(setToggleState, [props.enabled]);
 
   // Toggle the classNames
   const toggleSwitch = (state) => {
     if (state) {
-      setToggleClass('on');
+      setToggleClass("on");
     } else {
-      setToggleClass('off');
+      setToggleClass("off");
     }
-  }
+  };
+
+  const handleKeyDown = (ev) => {
+    if (ev.key === " " || ev.key === "Enter" || ev.key === "Spacebar") {
+      if (props.changeMode) {
+        ev.preventDefault();
+        props.update(toggleClass === "on" ? false : true);
+      }
+    }
+  };
 
   return (
     <div className="toggle">
-      <div onClick={() => props.update(toggleClass === 'on' ? false : true)} className={"SwitchControl " + toggleClass}>
+      <div
+        tabIndex="0"
+        role="button"
+        onKeyDown={(event) => handleKeyDown(event)}
+        onClick={() => props.update(toggleClass === "on" ? false : true)}
+        className={"SwitchControl " + toggleClass}
+      >
         <div className="SwitchControl--slider">
           <div className="SwitchControl--knob"></div>
         </div>

@@ -17,7 +17,6 @@ const readAnnotations = (postId, userId) => {
   });
 };
 
-
 const addAnnotation = (annotation) => {
   return new Promise((resolve, reject) => {
     mongoClient
@@ -43,5 +42,6 @@ const addAnnotation = (annotation) => {
 };
 
 module.exports = {
-  readAnnotations, addAnnotation
+  readAnnotations,
+  addAnnotation,
 };

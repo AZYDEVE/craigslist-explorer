@@ -6,14 +6,14 @@ const userController = require("./../controller/user.controller");
 
 const signInPost = (req, res, next) => {
   if (req && req.body) {
-
     // Check if all fields are set
     if (!req.body.email || !req.body.password) {
-      return res.status(400).json({ message: "One of the required fields is not set" });
+      return res
+        .status(400)
+        .json({ message: "One of the required fields is not set" });
     }
 
     passport.authenticate("local", (err, user) => {
-
       if (err) {
         return next(err);
       }
@@ -54,10 +54,11 @@ const signInGet = (req, res) => {
 
 const signUp = (req, res, next) => {
   if (req) {
-
     // Check if all fields are set
     if (!req.body || !req.body.email || !req.body.password) {
-      return res.status(400).json({ message: "One of the required fields is not set" });
+      return res
+        .status(400)
+        .json({ message: "One of the required fields is not set" });
     }
 
     helper
@@ -68,13 +69,14 @@ const signUp = (req, res, next) => {
           .addUser({ email: req.body.email, password: req.body.password })
           .then((users) => {
             passport.authenticate("local", (err, user) => {
-
               if (err) {
                 return next(err);
               }
 
               if (!user) {
-                return res.status(202).json({ message: "Failed to validate user!" });
+                return res
+                  .status(202)
+                  .json({ message: "Failed to validate user!" });
               }
 
               req.login(user, (err) => {
@@ -98,7 +100,6 @@ const signUp = (req, res, next) => {
         res.status(202);
         res.json(err);
       });
-
   } else {
     // No form data found
     res.status(500); // 500 Internal Server Error
@@ -113,7 +114,6 @@ const signOut = (req, res) => {
   req.logout();
   res.send(true);
 };
-
 
 router.post("/signup", signUp);
 router.get("/signin", signInGet);

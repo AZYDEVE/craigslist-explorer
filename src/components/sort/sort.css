@@ -27,7 +27,7 @@
 .sort .sort-by span,
 .sort .asc-desc span,
 .sort .amount span {
-  color:  black;
+  color: black;
   margin-left: 5px;
   margin-right: 5px;
   user-select: none;

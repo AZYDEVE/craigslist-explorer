@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Switch, Route, HashRouter as Router } from "react-router-dom";
-import { login, logout } from './api/user'
-import { LoadScript } from '@react-google-maps/api';
-import { deleteCookie } from './services/cookie.service'
-import './index.css';
+import { login, logout } from "./api/user";
+import { LoadScript } from "@react-google-maps/api";
+import { deleteCookie } from "./services/cookie.service";
+import "./index.css";
 
 // views
 import Feed from "./views/feed";
@@ -27,33 +27,34 @@ const App = () => {
         if (response.data) {
           setUser(response.data);
         }
-      }).catch((err) => {
-        console.log('Request to login failed', err);
       })
-  }
+      .catch((err) => {
+        console.log("Request to login failed", err);
+      });
+  };
 
   const loginSuccess = (data) => {
     setUser(data);
-  }
+  };
 
   const logoutUser = () => {
-    logout().then((response) => {
-      if (response.data && response.data === true) {
-        setUser(null);
-        // remove cookie
-        deleteCookie('connect.sid')
-      }
-    }).catch((err) => {
-      console.log('Request to logout failed', err);
-    })
-  }
+    logout()
+      .then((response) => {
+        if (response.data && response.data === true) {
+          setUser(null);
+          // remove cookie
+          deleteCookie("connect.sid");
+        }
+      })
+      .catch((err) => {
+        console.log("Request to logout failed", err);
+      });
+  };
 
   useEffect(getUser, []);
 
   return (
-    <LoadScript
-      googleMapsApiKey="AIzaSyCUt2G6KFrKTpKlUkbUrTIH0SqpgzRX8_0"
-    >
+    <LoadScript googleMapsApiKey="AIzaSyCUt2G6KFrKTpKlUkbUrTIH0SqpgzRX8_0">
       <Router>
         <Header logout={logoutUser} user={user} />
         <div role="main" id="craigslist-body" className="craigslist-body">
@@ -62,11 +63,11 @@ const App = () => {
               <FeedAside setFilter={setFilterNeighborhood} post={post} />
               <Feed neighborhood={filterNeighborhood} postLoaded={setPost} />
             </Route>
-            <Route path="/post/:postId" >
+            <Route path="/post/:postId">
               <FeedAside setFilter={setFilterNeighborhood} post={post} />
               <Post postLoaded={setPost} user={user} />
             </Route>
-            <Route path="/login" >
+            <Route path="/login">
               <Authenticate loginSuccess={loginSuccess} />
             </Route>
             <Route path="*" component={NotFound} />
@@ -76,6 +77,6 @@ const App = () => {
       </Router>
     </LoadScript>
   );
-}
+};
 
 export default App;

@@ -39,7 +39,7 @@ if (env === "localhost") {
     mongo: {
       uri,
     },
-    google
+    google,
   };
 }
 

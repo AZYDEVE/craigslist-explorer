@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 const axios = require("axios");
 
 const readJson = (path) => {
@@ -6,22 +6,24 @@ const readJson = (path) => {
   try {
     jsonString = fs.readFileSync(path).toString();
   } catch (err) {
-    throw new Error('Failed to read json file', err, { path });
+    throw new Error("Failed to read json file", err, { path });
   }
   try {
     return JSON.parse(jsonString);
   } catch (err) {
-    throw new Error('Failed to parse json file', err, { path, jsonString });
+    throw new Error("Failed to parse json file", err, { path, jsonString });
   }
-}
+};
 
 const writeJson = (path, data) => {
   fs.writeFileSync(path, JSON.stringify(data));
-}
+};
 
 const getData = async (location) => {
   console.log(location);
-  const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}+SF,CA&key=`);
+  const response = await axios.get(
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${location}+SF,CA&key=`
+  );
   if (response && response.data) {
     if (response.data.results && response.data.results.length > 0) {
       const data = response.data.results[0];
@@ -30,13 +32,11 @@ const getData = async (location) => {
       }
     }
   }
-}
+};
 
 const cleanData = async () => {
   const original = readJson("data/neighborhood.json");
-  const result = {
-
-  };
+  const result = {};
 
   const keys = Object.keys(original);
 
@@ -45,9 +45,9 @@ const cleanData = async () => {
     result[element] = await getData(element);
   }
 
-  writeJson('data/result-neighborhood.json', result);
+  writeJson("data/result-neighborhood.json", result);
   // writeJson('data/neighborhood.json', allUniqueNeighborhood);
-}
+};
 
 // cleanData();
 
@@ -59,10 +59,10 @@ const convertToArray = () => {
   const keys = Object.keys(original);
   for (let index = 0; index < keys.length; index++) {
     original[keys[index]].name = keys[index];
-    result.push(original[keys[index]])
+    result.push(original[keys[index]]);
   }
 
-  writeJson('data/result-neighborhood-2.json', result);
-}
+  writeJson("data/result-neighborhood-2.json", result);
+};
 
 convertToArray();

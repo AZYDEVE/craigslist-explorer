@@ -9,12 +9,11 @@ const addAnnotation = async (req, res) => {
       helper
         .doesPostExist(req.body.postId)
         .then(() => {
-
           const annotation = {
             postId: req.body.postId,
             message: req.body.message,
             userId: req.user._id.toString(),
-            created: Date.now()
+            created: Date.now(),
           };
 
           annotationController
@@ -30,12 +29,11 @@ const addAnnotation = async (req, res) => {
                 message: err || "failed to add annotation",
               });
             });
-
-        }).catch((err) => {
+        })
+        .catch((err) => {
           res.status(202);
           res.json(err);
         });
-
     } else {
       console.error("Failed to authenticate");
       return res.status(400).json({ message: "Failed to authenticate" });
@@ -52,14 +50,13 @@ const addAnnotation = async (req, res) => {
 
 const getAnnotations = async (req, res) => {
   if (req && req.isAuthenticated()) {
-
     const id = req.query.id;
 
     if (!id || id.length !== 24) {
       return res.status(400).json({ message: "id is not valid" }); // Invalid ID length
     }
 
-    // read annotation table 
+    // read annotation table
     annotationController
       .readAnnotations(id, req.user._id.toString())
       .then((post) => {
@@ -73,7 +70,6 @@ const getAnnotations = async (req, res) => {
           message: err || "failed request",
         });
       });
-
   } else {
     return res.status(400).json({ message: "Failed to authenticate" });
   }

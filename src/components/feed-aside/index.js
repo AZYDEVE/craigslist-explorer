@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { withRouter, Link } from "react-router-dom";
 import { convertDate } from "../../services/helper";
-import { getLocations } from './../../api/location'
-import Map from '../map';
+import { getLocations } from "./../../api/location";
+import Map from "../map";
 
 import "./feed-aside.css";
 
 const Aside = (props) => {
-
   const [locations, setLocations] = useState([]);
   const [location, setLocation] = useState("");
   const [coordinates, setCoordinates] = useState({});
@@ -20,78 +19,86 @@ const Aside = (props) => {
         if (response.data) {
           setLocations(response.data);
         }
-      }).catch((err) => {
-        console.log('Request to get locations failed', err);
       })
-  }
+      .catch((err) => {
+        console.log("Request to get locations failed", err);
+      });
+  };
 
   // Calculate the zoom level of the map
   const calculateZoom = () => {
     var GLOBE_WIDTH = 256; // a constant in Google's map projection
     if (coordinates.viewport) {
       var west = coordinates.viewport.southwest.lng;
-      var east = coordinates.viewport.northeast.lng
+      var east = coordinates.viewport.northeast.lng;
       var angle = east - west;
       if (angle < 0) {
         angle += 360;
       }
-      setZoom(Math.round(Math.log(100 * 360 / angle / GLOBE_WIDTH) / Math.LN2));
+      setZoom(
+        Math.round(Math.log((100 * 360) / angle / GLOBE_WIDTH) / Math.LN2)
+      );
     }
-  }
+  };
 
   // Find the coordinates of the filtered option
-  const filterLocation = useCallback((loc) => {
-    const filtered = locations.filter((el) => el.name === loc);
-    if (filtered && filtered.length > 0) {
-      setCoordinates(filtered[0]);
-    } else {
-      setDefaultCoordinates();
-    }
-  }, [locations]);
+  const filterLocation = useCallback(
+    (loc) => {
+      const filtered = locations.filter((el) => el.name === loc);
+      if (filtered && filtered.length > 0) {
+        setCoordinates(filtered[0]);
+      } else {
+        setDefaultCoordinates();
+      }
+    },
+    [locations]
+  );
 
   // Set default coordinates of SF
   const setDefaultCoordinates = () => {
     setCoordinates({
-      "bounds": {
-        "northeast": {
-          "lat": 37.9298239,
-          "lng": -122.28178
+      bounds: {
+        northeast: {
+          lat: 37.9298239,
+          lng: -122.28178,
         },
-        "southwest": {
-          "lat": 37.6398299,
-          "lng": -123.173825
-        }
-      },
-      "location": {
-        "lat": 37.7749295,
-        "lng": -122.4194155
-      },
-      "viewport": {
-        "northeast": {
-          "lat": 37.812,
-          "lng": -122.3482
+        southwest: {
+          lat: 37.6398299,
+          lng: -123.173825,
         },
-        "southwest": {
-          "lat": 37.70339999999999,
-          "lng": -122.527
-        }
-      }
+      },
+      location: {
+        lat: 37.7749295,
+        lng: -122.4194155,
+      },
+      viewport: {
+        northeast: {
+          lat: 37.812,
+          lng: -122.3482,
+        },
+        southwest: {
+          lat: 37.70339999999999,
+          lng: -122.527,
+        },
+      },
     });
-  }
+  };
 
   // Load the post and set coordinates to post when on post page
   // also lock the select
   useEffect(() => {
     if (props.post && props.post.neighborhood) {
-      const neighborhood = props.post.neighborhood.join(" ")
+      const neighborhood = props.post.neighborhood.join(" ");
       filterLocation(neighborhood);
       setLocation(neighborhood);
-    } else if (location === '') { // default value of SF
+    } else if (location === "") {
+      // default value of SF
       setDefaultCoordinates();
-    } else { // Find coordinates of option
-      filterLocation(location)
+    } else {
+      // Find coordinates of option
+      filterLocation(location);
     }
-  }, [location, locations, props.post, filterLocation])
+  }, [location, locations, props.post, filterLocation]);
 
   useEffect(calculateZoom, [coordinates]);
   useEffect(getAllLocations, []);
@@ -99,7 +106,7 @@ const Aside = (props) => {
   // Update filter for feeds
   useEffect(() => {
     if (props.setFilter) {
-      props.setFilter(location)
+      props.setFilter(location);
     }
   }, [location, props]);
 
@@ -108,90 +115,85 @@ const Aside = (props) => {
     if (props.post === null) {
       setLocation("");
     }
-  }, [props.post])
+  }, [props.post]);
 
   return (
     <div className="aside">
       <div className="date">
-        <div>
-          {convertDate(Date.now()).split(' ')[0]}
-        </div>
-        <div>
-          {convertDate(Date.now()).split(' ')[1]}
-        </div>
+        <div>{convertDate(Date.now()).split(" ")[0]}</div>
+        <div>{convertDate(Date.now()).split(" ")[1]}</div>
       </div>
       <div className="divider"></div>
       <div className="location">
         <div>
-          <div>
-            San Francisco
-        </div>
-          <div>
-            US, CA
-        </div>
+          <div>San Francisco</div>
+          <div>US, CA</div>
         </div>
         <div className="image"></div>
       </div>
       <div className="divider"></div>
       <div className="location-picker">
         <div>
-          <select aria-label="Option menu for neighborhood filter" disabled={props.post ? 'disabled' : ''} value={location} onChange={(event) => setLocation(event.target.value)} name="location">
+          <select
+            aria-label="Option menu for neighborhood filter"
+            disabled={props.post ? "disabled" : ""}
+            value={location}
+            onChange={(event) => setLocation(event.target.value)}
+            onBlur={(event) => setLocation(event.target.value)}
+            name="location"
+          >
             <option value="">All</option>
-            {
-              locations && locations.length > 0 ?
-                locations.map((loc, index) => {
-                  return <option key={index} value={loc.name}>{loc.name}</option>
+            {locations && locations.length > 0
+              ? locations.map((loc, index) => {
+                  return (
+                    <option key={index} value={loc.name}>
+                      {loc.name}
+                    </option>
+                  );
                 })
-                :
-                ''
-            }
+              : ""}
           </select>
         </div>
         <div className="map">
-          <Map rectangle={true} center={coordinates.location} zoom={zoom} bounds={coordinates.viewport} />
+          <Map
+            rectangle={true}
+            center={coordinates.location}
+            zoom={zoom}
+            bounds={coordinates.viewport}
+          />
         </div>
       </div>
       <div className="divider"></div>
       <div className="current">
-        <div>
-          Lists
+        <div>Lists</div>
+        <div alt="Arrow down" aria-label="Arrow down" className="arrow">
+          ↓
         </div>
-        <div alt='Arrow down' aria-label='Arrow down' className="arrow">
+        <div>housing</div>
+        <div alt="Arrow down" aria-label="Arrow down" className="arrow">
           ↓
         </div>
         <div>
-          housing
+          {props.post && props.post.title ? (
+            <Link className="back" to="/">
+              apartments housing for rent
+            </Link>
+          ) : (
+            <h1>apartments housing for rent</h1>
+          )}
         </div>
-        <div alt='Arrow down' aria-label='Arrow down' className="arrow">
-          ↓
-        </div>
-        <div>
-          {
-            props.post && props.post.title ?
-              <Link
-                className="back"
-                to='/'
-              >apartments housing for rent</Link>
-              :
-              <h1>apartments housing for rent</h1>
-          }
-        </div>
-        {
-          props.post && props.post.title ?
-            <React.Fragment>
-              <div alt='Arrow down' aria-label='Arrow down' className="arrow">
-                ↓
-              </div>
-              <div>
-                {props.post.title}
-              </div>
-            </React.Fragment>
-            :
-            ""
-        }
+        {props.post && props.post.title ? (
+          <React.Fragment>
+            <div alt="Arrow down" aria-label="Arrow down" className="arrow">
+              ↓
+            </div>
+            <div>{props.post.title}</div>
+          </React.Fragment>
+        ) : (
+          ""
+        )}
       </div>
     </div>
-
   );
 };
 

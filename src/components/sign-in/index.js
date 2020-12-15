@@ -32,9 +32,24 @@ const Login = (props) => {
       });
   };
 
+  const handleKeyDown = (ev) => {
+    if (ev.key === " " || ev.key === "Enter" || ev.key === "Spacebar") {
+      if (props.changeMode) {
+        ev.preventDefault();
+        props.changeMode();
+      }
+    }
+  };
+
   return (
     <div className="container">
-      <div onClick={props.changeMode} className="top-right-corner">
+      <div
+        tabIndex="0"
+        role="button"
+        onKeyDown={handleKeyDown}
+        onClick={props.changeMode}
+        className="top-right-corner"
+      >
         Sign-up
       </div>
       <h1>Sign-in</h1>
@@ -44,11 +59,10 @@ const Login = (props) => {
         <input
           id="email"
           alt="email"
-          autoFocus
           name="username"
           placeholder="Enter your Email"
           type="text"
-          minLength='3'
+          minLength="3"
           required
           onChange={(event) => setUsername(event.target.value)}
         ></input>
@@ -62,7 +76,7 @@ const Login = (props) => {
           name="password"
           placeholder="Enter your Password"
           type="password"
-          minLength='3'
+          minLength="3"
           required
           onChange={(event) => handlePassword(event.target.value)}
         ></input>

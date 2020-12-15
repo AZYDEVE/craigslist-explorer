@@ -32,11 +32,26 @@ const Register = (props) => {
       });
   };
 
+  const handleKeyDown = (ev) => {
+    if (ev.key === " " || ev.key === "Enter" || ev.key === "Spacebar") {
+      if (props.changeMode) {
+        ev.preventDefault();
+        props.changeMode();
+      }
+    }
+  };
+
   const handlePassword = (pass) => setPassword(sha256(pass).toString());
 
   return (
     <div className="container">
-      <div onClick={props.changeMode} className="top-right-corner">
+      <div
+        tabIndex="0"
+        role="button"
+        onKeyDown={handleKeyDown}
+        onClick={props.changeMode}
+        className="top-right-corner"
+      >
         Sign-in
       </div>
       <h1>Sign-up</h1>
@@ -49,7 +64,7 @@ const Register = (props) => {
           name="username"
           placeholder="Enter your Email"
           type="text"
-          minLength='3'
+          minLength="3"
           required
           onChange={(event) => setEmail(event.target.value)}
         ></input>
@@ -63,7 +78,7 @@ const Register = (props) => {
           name="password"
           placeholder="Enter your Password"
           type="password"
-          minLength='4'
+          minLength="4"
           required
           onChange={(event) => handlePassword(event.target.value)}
         ></input>

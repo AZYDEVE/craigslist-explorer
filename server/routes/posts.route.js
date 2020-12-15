@@ -3,7 +3,6 @@ const postController = require("../controller/posts.controller");
 const router = express.Router();
 
 const getAllPosts = (req, res) => {
-
   const page = req.query.page;
   let filter = req.query.filter;
   try {
@@ -23,7 +22,7 @@ const getAllPosts = (req, res) => {
     sorting = {
       amount: "10",
       sortBy: "date",
-      sortOrder: "asc"
+      sortOrder: "asc",
     };
   }
 
@@ -39,7 +38,9 @@ const getAllPosts = (req, res) => {
   }
 
   // Remove empty string from array
-  neighborhood = neighborhood.filter((val) => { return val !== ""; });
+  neighborhood = neighborhood.filter((val) => {
+    return val !== "";
+  });
 
   if (!sorting.amount) {
     sorting.amount = 10;
@@ -57,7 +58,13 @@ const getAllPosts = (req, res) => {
 
   // read entire table
   postController
-    .readPosts(filter, sorting, startRange, parseInt(sorting.amount), neighborhood)
+    .readPosts(
+      filter,
+      sorting,
+      startRange,
+      parseInt(sorting.amount),
+      neighborhood
+    )
     .then((posts) => {
       res.json(posts);
     })

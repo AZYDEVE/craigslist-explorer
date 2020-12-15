@@ -18,5 +18,5 @@ const getLocations = () => {
 };
 
 module.exports = {
-  getLocations
+  getLocations,
 };

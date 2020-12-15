@@ -14,7 +14,6 @@ const NewAnnotation = (props) => {
   useEffect(initialSetup, [props.postId]);
 
   const handleClick = () => {
-
     var payload = {
       postId: postId,
       message: message,
@@ -23,7 +22,6 @@ const NewAnnotation = (props) => {
     addAnnotation(payload)
       .then((response) => {
         if (response.status === 200) {
-
           // link to post page
           props.success(response.data);
 
@@ -50,11 +48,10 @@ const NewAnnotation = (props) => {
       ></textarea>
       <button aria-label="Add Annotation to post" onClick={handleClick}>
         Submit
-        </button>
+      </button>
       <div>{error ? error : ""}</div>
     </div>
   );
-
 };
 
 export default NewAnnotation;

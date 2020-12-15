@@ -3,16 +3,16 @@ const mongoSanitize = require("express-mongo-sanitize");
 const compression = require("compression");
 const cors = require("cors");
 const httpStatus = require("http-status");
-const session = require('express-session')
+const session = require("express-session");
 const { v4: uuidv4 } = require("uuid");
-const FileStore = require('session-file-store')(session);
-const passport = require('passport');
+const FileStore = require("session-file-store")(session);
+const passport = require("passport");
 const cookieParser = require("cookie-parser");
-var bodyParser = require('body-parser')
+var bodyParser = require("body-parser");
 const config = require("./config/config");
 
 // Passport config
-const configurePassport = require('./config/authConfig');
+const configurePassport = require("./config/authConfig");
 configurePassport();
 
 // routes
@@ -24,19 +24,24 @@ const locationRoute = require("./routes/location.route");
 // Express app
 const app = express();
 
-
-
 // enable cors
-var whitelist = ['http://localhost:8080', 'https://emile-f.github.io', 'localhost:3001']
-app.use(cors({
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback()
-    }
-  }, credentials: true
-}));
+var whitelist = [
+  "http://localhost:8080",
+  "https://emile-f.github.io",
+  "localhost:3001",
+];
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback();
+      }
+    },
+    credentials: true,
+  })
+);
 
 // init cookie-parser
 app.use(cookieParser());
@@ -54,15 +59,15 @@ app.use(compression());
 // session middelware
 const sessionConfig = {
   genid: (req) => {
-    return uuidv4() // use UUIDs for session IDs
+    return uuidv4(); // use UUIDs for session IDs
   },
   store: new FileStore(),
   secret: "Hi I'm Emile",
   resave: false,
-  saveUninitialized: false
-}
+  saveUninitialized: false,
+};
 
-app.use(session(sessionConfig))
+app.use(session(sessionConfig));
 
 // Enable passport
 app.use(passport.initialize());
@@ -82,7 +87,6 @@ app.use(express.static(__dirname + "/build"));
 //   res.status(httpStatus.NOT_FOUND);
 //   res.send("Not found");
 // });
-
 
 // Export Express router
 module.exports = app;

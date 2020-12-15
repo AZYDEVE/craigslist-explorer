@@ -47,9 +47,7 @@ const Footer = () => {
 
   return (
     <footer role="contentinfo" className={className}>
-      <div className="copyright">
-        Copyright © 2020, Emile Ferrand
-      </div>
+      <div className="copyright">Copyright © 2020, Emile Ferrand</div>
     </footer>
   );
 };
