@@ -46,6 +46,7 @@ const Login = (props) => {
       <div
         tabIndex="0"
         role="button"
+        aria-label="Sign-up form"
         onKeyDown={handleKeyDown}
         onClick={props.changeMode}
         className="top-right-corner"

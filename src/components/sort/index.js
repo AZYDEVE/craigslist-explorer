@@ -81,6 +81,7 @@ const Sort = (props) => {
         <span
           tabIndex="0"
           role="button"
+          aria-label="Change sort order in ascending order"
           onKeyDown={(event) => handleKeyDown(event, "asc")}
           className={sortOrder === "asc" ? "active" : ""}
           onClick={() => setSortOrder("asc")}
@@ -91,6 +92,7 @@ const Sort = (props) => {
         <span
           tabIndex="0"
           role="button"
+          aria-label="Change sort order in descending order"
           onKeyDown={(event) => handleKeyDown(event, "desc")}
           className={sortOrder === "desc" ? "active" : ""}
           onClick={() => setSortOrder("desc")}

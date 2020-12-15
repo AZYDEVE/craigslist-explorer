@@ -39,6 +39,7 @@ const Toggle = (props) => {
       <div
         tabIndex="0"
         role="button"
+        aria-label="Change toggle state"
         onKeyDown={(event) => handleKeyDown(event)}
         onClick={() => props.update(toggleClass === "on" ? false : true)}
         className={"SwitchControl " + toggleClass}
