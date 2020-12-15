@@ -11,6 +11,7 @@ You must implement full authentication with passport or similar, and add a creat
 Deadline is the day of the final exam.
 
 Class link: https://johnguerra.co/classes/webDevelopment_fall_2020/
+
 Original dataset: [here](/data/apts.json)
 
 ## Author
