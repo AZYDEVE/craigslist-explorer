@@ -9,7 +9,7 @@ const FileStore = require("session-file-store")(session);
 const passport = require("passport");
 const cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
-const config = require("./config/config");
+const config = require("./config/config");  
 
 // Passport config
 const configurePassport = require("./config/authConfig");
@@ -60,9 +60,9 @@ app.use(compression());
 const sessionConfig = {
   genid: (req) => {
     return uuidv4(); // use UUIDs for session IDs
-  },
-  store: new FileStore(),
-  secret: "Hi I'm Emile",
+  }, 
+  store: new FileStore(),    
+  secret: "Hi I'm Emile",      // Alex: Please store the secret key in the .env file. 
   resave: false,
   saveUninitialized: false,
 };
