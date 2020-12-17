@@ -1,0 +1,5 @@
+Alex: 
+1. I think you have done a great job in components reusability by separating the page contents to different small components. 2. 
+2. I realized your webpage is very fast because you let the server do most of the computational work, such as querying and combining results. Your frontend only responsible for rendering the result sent back from the server which I think is the proper way to do it. 
+3. Another point you did very well is that you made use of mongo query to get the result you need from the database. This is much better than getting the entire collection from the databases and finding the information or combining data. This is the main reason why your web page is really fast. 
+4. I can’t comment too much about a particular line of code because I think your code is clean and succinct.   
