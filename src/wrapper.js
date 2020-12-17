@@ -53,6 +53,10 @@ const App = () => {
 
   useEffect(getUser, []);
 
+  //Alex :  I like how you use the router to include different components on the page.  
+  //For components show on every page, you put outside of the switch tag. 
+  //For components show only on a particular page, you put between the Route tag. so good job.  
+  // in my project, I have only use router to switch between pages. 
   return (
     <LoadScript googleMapsApiKey="AIzaSyCUt2G6KFrKTpKlUkbUrTIH0SqpgzRX8_0">
       <Router>
